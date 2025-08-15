@@ -1,0 +1,77 @@
+# ========================
+# Build / Bin / Obj
+# ========================
+bin/
+obj/
+**/bin/
+**/obj/
+
+# ========================
+# User-specific / IDE
+# ========================
+.vscode/
+*.user
+*.suo
+*.userprefs
+*.csproj.user
+*.sln.docstates
+.idea/
+*.sln.ide
+
+# ========================
+# ASP.NET / Web
+# ========================
+# Config local y secretos
+appsettings.Local.json
+appsettings.Development.json
+secrets.json
+
+# Publish folder
+publish/
+
+# ========================
+# NuGet
+# ========================
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+*.nuget.cache
+
+# ========================
+# Logs
+# ========================
+*.log
+logs/
+
+# ========================
+# Test Results
+# ========================
+TestResults/
+*.trx
+
+# ========================
+# ReSharper
+# ========================
+_ReSharper*/
+*.DotSettings.user
+
+# ========================
+# DotCover
+# ========================
+*.dotCover
+
+# ========================
+# EF / Database design
+# ========================
+*.dbmdl           # Archivos binarios de migraciones (diseño), ignorar
+# No ignorar la carpeta Migrations/ para mantener las migraciones versionadas
+
+# ========================
+# Otros
+# ========================
+*.DS_Store
+Thumbs.db
+
+# Visual Studio
+.vs/
