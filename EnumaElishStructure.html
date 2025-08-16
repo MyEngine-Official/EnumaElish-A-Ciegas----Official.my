@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de Proyectos GamePlatform - EnumaElish: A Ciegas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .project-card, .game-card {
+            background-color: rgba(31, 41, 55, 0.6);
+            border-left: 4px solid;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .project-card:hover, .game-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen p-8 md:p-12">
+
+    <!-- Contenedor principal para la plataforma de juego -->
+    <div class="max-w-6xl mx-auto">
+        <h1 class="text-4xl font-bold text-center text-blue-400 mb-8">🎮 Estructura de Proyectos: EnumaElish: A Ciegas</h1>
+
+        <!-- Tarjeta del proyecto principal -->
+        <div class="bg-gray-800 p-6 rounded-xl shadow-2xl space-y-8">
+            <div class="flex items-center space-x-4 mb-4">
+                <span class="text-3xl">📁</span>
+                <p class="text-xl font-semibold text-blue-300">/GamePlatform</p>
+            </div>
+            
+            <!-- Contenedor para los módulos del proyecto -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Módulo: Launcher -->
+                <div class="project-card border-blue-500 rounded-lg p-5">
+                    <h2 class="text-2xl font-bold text-blue-400 flex items-center mb-3">
+                        <span class="text-3xl mr-3">🚀</span> Launcher
+                    </h2>
+                    <p class="text-sm text-gray-400 italic mb-4"># Proyecto MAUI Blazor Hybrid</p>
+                    <ul class="list-disc pl-5 text-sm space-y-2">
+                        <li><span class="font-medium text-gray-200">Launcher.UI:</span> UI, Razor Pages</li>
+                        <li><span class="font-medium text-gray-200">Launcher.Application:</span> Lógica de aplicación</li>
+                        <li><span class="font-medium text-gray-200">Launcher.Infrastructure:</span> Comunicación con APIs, persistencia</li>
+                        <li><span class="font-medium text-gray-200">Launcher.Domain:</span> Entidades y reglas de dominio</li>
+                    </ul>
+                </div>
+                
+                <!-- Módulo: GameClient -->
+                <div class="project-card border-green-500 rounded-lg p-5">
+                    <h2 class="text-2xl font-bold text-green-400 flex items-center mb-3">
+                        <span class="text-3xl mr-3">🎮</span> GameClient
+                    </h2>
+                    <p class="text-sm text-gray-400 italic mb-4"># Proyecto MonoGame</p>
+                    <ul class="list-disc pl-5 text-sm space-y-2">
+                        <li><span class="font-medium text-gray-200">Game.UI:</span> Pantallas y HUD</li>
+                        <li><span class="font-medium text-gray-200">Game.Logic:</span> Mecánicas de juego</li>
+                        <li><span class="font-medium text-gray-200">Game.Network:</span> Clientes para APIs y SignalR</li>
+                        <li><span class="font-medium text-gray-200">Game.Domain:</span> Modelos de juego</li>
+                    </ul>
+                </div>
+                
+                <!-- Módulo: Server.LightAPI -->
+                <div class="project-card border-orange-500 rounded-lg p-5">
+                    <h2 class="text-2xl font-bold text-orange-400 flex items-center mb-3">
+                        <span class="text-3xl mr-3">☁️</span> Server.LightAPI
+                    </h2>
+                    <p class="text-sm text-gray-400 italic mb-4"># API ligera con SignalR</p>
+                    <ul class="list-disc pl-5 text-sm space-y-2">
+                        <li><span class="font-medium text-gray-200">ServerLight.API:</span> Controladores, Hubs</li>
+                        <li><span class="font-medium text-gray-200">ServerLight.Application:</span> Casos de uso</li>
+                        <li><span class="font-medium text-gray-200">ServerLight.Infrastructure:</span> EF Core, Repositorios</li>
+                        <li><span class="font-medium text-gray-200">ServerLight.Domain:</span> Entidades</li>
+                    </ul>
+                </div>
+
+                <!-- Módulo: Server.HeavyAPI -->
+                <div class="project-card border-red-500 rounded-lg p-5">
+                    <h2 class="text-2xl font-bold text-red-400 flex items-center mb-3">
+                        <span class="text-3xl mr-3">⚡</span> Server.HeavyAPI
+                    </h2>
+                    <p class="text-sm text-gray-400 italic mb-4"># API de lógica intensiva</p>
+                    <ul class="list-disc pl-5 text-sm space-y-2">
+                        <li><span class="font-medium text-gray-200">ServerHeavy.API:</span> Endpoints especializados</li>
+                        <li><span class="font-medium text-gray-200">ServerHeavy.Application:</span> Aplicación</li>
+                        <li><span class="font-medium text-gray-200">ServerHeavy.Infrastructure:</span> Infraestructura</li>
+                        <li><span class="font-medium text-gray-200">ServerHeavy.Domain:</span> Dominio</li>
+                    </ul>
+                </div>
+                
+                <!-- Módulo: Shared -->
+                <div class="project-card border-purple-500 rounded-lg p-5">
+                    <h2 class="text-2xl font-bold text-purple-400 flex items-center mb-3">
+                        <span class="text-3xl mr-3">🔗</span> Shared
+                    </h2>
+                    <p class="text-sm text-gray-400 italic mb-4"># Código compartido entre proyectos</p>
+                    <ul class="list-disc pl-5 text-sm space-y-2">
+                        <li><span class="font-medium text-gray-200">DTOs:</span> Objetos de Transferencia de Datos</li>
+                        <li><span class="font-medium text-gray-200">Contracts:</span> Interfaces para comunicación</li>
+                        <li><span class="font-medium text-gray-200">Utilities:</span> Helpers, extensiones</li>
+                    </ul>
+                </div>
+
+                <!-- Módulo: Docs -->
+                <div class="project-card border-gray-500 rounded-lg p-5">
+                    <h2 class="text-2xl font-bold text-gray-400 flex items-center mb-3">
+                        <span class="text-3xl mr-3">📄</span> Docs
+                    </h2>
+                    <p class="text-sm text-gray-400 italic mb-4"># Documentación y diagramas</p>
+                    <ul class="list-disc pl-5 text-sm space-y-2">
+                        <li><span class="font-medium text-gray-200">Documentos:</span> Archivos de documentación</li>
+                        <li><span class="font-medium text-gray-200">Diagramas:</span> Archivos de diagramas</li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <!-- Detalles del juego integrados -->
+            <div class="mt-12 space-y-8">
+                <h2 class="text-3xl font-bold text-center text-yellow-400">Detalles del Juego: EnumaElish: A Ciegas</h2>
+
+                <!-- Modalidades de juego -->
+                <div class="game-card border-yellow-500 rounded-lg p-5">
+                    <h3 class="text-2xl font-bold text-yellow-300 flex items-center mb-3">
+                        <span class="text-3xl mr-3">🕹️</span> Modalidades
+                    </h3>
+                    <ul class="list-disc pl-5 text-sm space-y-2">
+                        <li><span class="font-medium text-gray-200">Modo Historia:</span> Sigue la historia del libro combinada con el gameplay del juego.</li>
+                        <li><span class="font-medium text-gray-200">Modo Online:</span> Partidas inspiradas en una escena específica del libro.</li>
+                        <li><span class="font-medium text-gray-200">Modo Torneo:</span> Modalidad competitiva con recompensas económicas.</li>
+                    </ul>
+                </div>
+                
+                <!-- Jugabilidad Principal -->
+                <div class="game-card border-purple-500 rounded-lg p-5">
+                    <h3 class="text-2xl font-bold text-purple-300 flex items-center mb-3">
+                        <span class="text-3xl mr-3">⚔️</span> Jugabilidad Online
+                    </h3>
+                    <p class="text-sm text-gray-200 italic mb-4">Inspirado en Among Us y The Wolf. Dividido en tres fases:</p>
+                    <ul class="list-disc pl-5 text-sm space-y-2">
+                        <li><span class="font-medium text-gray-200">Fase de Día:</span> Discusión y votación.</li>
+                        <li><span class="font-medium text-gray-200">Fase de Combate:</span> Duelo PvP para validar votos.</li>
+                        <li><span class="font-medium text-gray-200">Fase de Noche:</span> Uso de habilidades especiales y pistas de la IA.</li>
+                    </ul>
+                </div>
+                
+                <!-- Mecánicas Extendidas -->
+                <div class="game-card border-pink-500 rounded-lg p-5">
+                    <h3 class="text-2xl font-bold text-pink-300 flex items-center mb-3">
+                        <span class="text-3xl mr-3">✨</span> Mecánicas Dinámicas
+                    </h3>
+                    <ul class="list-disc pl-5 text-sm space-y-2">
+                        <li><span class="font-medium text-gray-200">Fragmentación del Entorno:</span> Eventos aleatorios que distorsionan el mapa o habilidades.</li>
+                        <li><span class="font-medium text-gray-200">Pactos Ilusorios:</span> Alianzas temporales con opción de traición.</li>
+                        <li><span class="font-medium text-gray-200">El Ojo del Enuma:</span> Un jugador secreto recibe pistas sutiles.</li>
+                        <li><span class="font-medium text-gray-200">El Susurro del Enuma:</span> La IA ofrece tratos con sacrificios.</li>
+                        <li><span class="font-medium text-gray-200">El Espejo de Rubí:</span> Sistema de doble identidad que "despierta".</li>
+                    </ul>
+                </div>
+
+                <!-- Modelo Económico -->
+                <div class="game-card border-green-500 rounded-lg p-5">
+                    <h3 class="text-2xl font-bold text-green-300 flex items-center mb-3">
+                        <span class="text-3xl mr-3">💰</span> Modelo Económico
+                    </h3>
+                    <ul class="list-disc pl-5 text-sm space-y-2">
+                        <li><span class="font-medium text-gray-200">Torneos Oficiales:</span> Torneos semanales de Todos contra Todos ($5 USD entrada, $10 USD premio).</li>
+                        <li><span class="font-medium text-gray-200">Torneos por Equipos (eSports):</span> Torneos con 30-40 jugadores ($50 USD entrada por equipo, $1,000 USD premio).</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
