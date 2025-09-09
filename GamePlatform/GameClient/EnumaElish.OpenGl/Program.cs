@@ -1,2 +1,4 @@
-﻿using var game = new EnumaElish.OpenGl.Game1();
+﻿using EnumaElish.OpenGl;
+
+using var game = new Game1();
 game.Run();

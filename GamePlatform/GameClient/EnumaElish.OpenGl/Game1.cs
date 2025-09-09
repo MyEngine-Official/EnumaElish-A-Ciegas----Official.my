@@ -1,19 +1,23 @@
-﻿using Microsoft.Xna.Framework;
+﻿using EnumaElish.UI.Content.GameUI;
+using EnumaElish.UI.Content.GameUI.GameTests.OnlineDev;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGameLibrary;
 
 namespace EnumaElish.OpenGl
 {
-    public class Game1 : Game
+    public class Game1 : Core
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-
-        public Game1()
+       
+        public Game1() : base("EnumaElish: A Ciegas", 1920, 1080, true)
         {
-            _graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
-            IsMouseVisible = true;
+            //_graphics = new GraphicsDeviceManager(this);
+            //Content.RootDirectory = "Content";
+            //Window.AllowUserResizing = true;
+            IsMouseVisible = false;
         }
 
         protected override void Initialize()
@@ -25,28 +29,7 @@ namespace EnumaElish.OpenGl
 
         protected override void LoadContent()
         {
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            // TODO: use this.Content to load your game content here
-        }
-
-        protected override void Update(GameTime gameTime)
-        {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-
-            // TODO: Add your update logic here
-
-            base.Update(gameTime);
-        }
-
-        protected override void Draw(GameTime gameTime)
-        {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            // TODO: Add your drawing code here
-
-            base.Draw(gameTime);
+            ChangeScene(new FaseDiurna());
         }
     }
 }

@@ -1,0 +1,57 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "SiReadme",
+      "SiContributorcovenant",
+      "LiEdit",
+      "SiUnrealengine",
+      "SiAssemblyscript"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false,
+    "useInternalPlugins": false
+  },
+  "Libro Matematicas 3D para Videojuegos": {
+    "iconName": "LiAlbum",
+    "iconColor": "#007ebd"
+  },
+  "EnumaElishBook": {
+    "iconName": "LiBook",
+    "iconColor": "#0092d1"
+  },
+  "GamePlatform": "SiMonogame",
+  "IA": "SiAirbnb",
+  "scripts": "SiAssemblyscript",
+  "MyEngine": "SiUnrealengine",
+  "EditorTexto": "LiEdit",
+  "CONTRIBUTING.md": "SiContributorcovenant",
+  "README.md": "SiReadme",
+  "README_GAME.md": "SiReadme",
+  "scripts/README.md": "SiReadme",
+  "GamePlatform/README.md": "SiReadme",
+  "EnumaElishBook/Chapters/Capitulo 1, Leo.md": "SiReadme",
+  "EnumaElishBook/Chapters/Los hermanos.md": "SiReadme"
+}

@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "Audio"
+		},
+		{
+			"path": "bin"
+		},
+		{
+			"path": "Entities"
+		},
+		{
+			"path": "Events"
+		},
+		{
+			"path": "Graphics"
+		},
+		{
+			"path": "Input"
+		},
+		{
+			"path": "obj"
+		},
+		{
+			"path": "Scenes"
+		},
+		{
+			"path": "ServerSideRendering"
+		}
+	]
+}

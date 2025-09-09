@@ -1,0 +1,9 @@
+{
+	"nodes":[
+		{"id":"bc095af3ba8b8d5e","type":"text","text":"EnumaElish: A Ciegas","x":-160,"y":-280,"width":250,"height":60,"color":"6"},
+		{"id":"d8aa58cde20a3850","type":"file","file":"EnumaElishBook/Layouts/Premisa.md","x":-235,"y":-120,"width":400,"height":400}
+	],
+	"edges":[
+		{"id":"cba15d21d0cd5c31","fromNode":"bc095af3ba8b8d5e","fromSide":"bottom","toNode":"d8aa58cde20a3850","toSide":"top"}
+	]
+}

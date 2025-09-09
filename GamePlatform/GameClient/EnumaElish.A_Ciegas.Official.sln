@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumaElish.OpenGl", "EnumaElish.OpenGl\EnumaElish.OpenGl.csproj", "{040E5F5A-B4AD-64DC-2BA1-D49558FDF95D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumaElish.Domain", "EEGame.Domain\EnumaElish.Game.Domain\EnumaElish.Domain.csproj", "{1AF18D8E-D168-98CA-2C49-B872112CC52C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumaElish.Network", "EEGame.Network\EnumaElish.Game.Network\EnumaElish.Network.csproj", "{150BC5E9-A4DA-9A6E-BE20-610B4667317A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumaElish.Logic", "EEGame.Logic\EnumaElish.Game.Logic\EnumaElish.Logic.csproj", "{3543A916-128F-B92D-390C-1F1E29648D34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumaElish.UI", "EEGame.UI\EnumaElish.UI\EnumaElish.UI.csproj", "{87194E08-0E5D-75BA-E3F7-C1FF152B0084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGameLibrary", "EEGame.Logic\GameEngine\MonoGameLibrary.csproj", "{5A1E25B0-D51B-F154-DBBE-E48959568492}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{040E5F5A-B4AD-64DC-2BA1-D49558FDF95D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{040E5F5A-B4AD-64DC-2BA1-D49558FDF95D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{040E5F5A-B4AD-64DC-2BA1-D49558FDF95D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{040E5F5A-B4AD-64DC-2BA1-D49558FDF95D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AF18D8E-D168-98CA-2C49-B872112CC52C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AF18D8E-D168-98CA-2C49-B872112CC52C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AF18D8E-D168-98CA-2C49-B872112CC52C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AF18D8E-D168-98CA-2C49-B872112CC52C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{150BC5E9-A4DA-9A6E-BE20-610B4667317A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{150BC5E9-A4DA-9A6E-BE20-610B4667317A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{150BC5E9-A4DA-9A6E-BE20-610B4667317A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{150BC5E9-A4DA-9A6E-BE20-610B4667317A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3543A916-128F-B92D-390C-1F1E29648D34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3543A916-128F-B92D-390C-1F1E29648D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3543A916-128F-B92D-390C-1F1E29648D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3543A916-128F-B92D-390C-1F1E29648D34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87194E08-0E5D-75BA-E3F7-C1FF152B0084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87194E08-0E5D-75BA-E3F7-C1FF152B0084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87194E08-0E5D-75BA-E3F7-C1FF152B0084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87194E08-0E5D-75BA-E3F7-C1FF152B0084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A1E25B0-D51B-F154-DBBE-E48959568492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A1E25B0-D51B-F154-DBBE-E48959568492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A1E25B0-D51B-F154-DBBE-E48959568492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A1E25B0-D51B-F154-DBBE-E48959568492}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DE354A2-FB77-46C9-9114-DED3B0410DDF}
+	EndGlobalSection
+EndGlobal

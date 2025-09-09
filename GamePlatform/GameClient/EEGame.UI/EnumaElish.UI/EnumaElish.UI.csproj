@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.*">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\GameUI\GameHistory\" />
+    <Folder Include="Content\GameUI\GameFace\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\EEGame.Logic\EnumaElish.Game.Logic\EnumaElish.Logic.csproj" />
+    <ProjectReference Include="..\..\EEGame.Logic\GameEngine\MonoGameLibrary.csproj" />
+    <ProjectReference Include="..\..\Game.Logic\GameEngine\MonoGameLibrary.csproj" />
+  </ItemGroup>
+</Project>

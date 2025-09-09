@@ -13,3 +13,88 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin utilidades/buttons/atlas_buttons.xml
+/copy:utilidades/buttons/atlas_buttons.xml
+
+#begin utilidades/buttons/HojaBotones.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:utilidades/buttons/HojaBotones.png
+
+#begin utilidades/cursor/cursor_atlas.xml
+/copy:utilidades/cursor/cursor_atlas.xml
+
+#begin utilidades/cursor/cursor.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:utilidades/cursor/cursor.png
+
+#begin utilidades/cursor/cursorOfficial.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:utilidades/cursor/cursorOfficial.png
+
+#begin utilidades/fonts/main_font.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:utilidades/fonts/main_font.spritefont
+
+#begin utilidades/pruebas_testing/capa_colisions.xml
+/copy:utilidades/pruebas_testing/capa_colisions.xml
+
+#begin utilidades/pruebas_testing/capa_mapa.xml
+/copy:utilidades/pruebas_testing/capa_mapa.xml
+
+#begin utilidades/pruebas_testing/para_tiled.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:utilidades/pruebas_testing/para_tiled.png
+
+#begin utilidades/tilemaps/acto_uno_online/acto_uno_online_colisiones.xml
+/copy:utilidades/tilemaps/acto_uno_online/acto_uno_online_colisiones.xml
+
+#begin utilidades/tilemaps/acto_uno_online/acto_uno.xml
+/copy:utilidades/tilemaps/acto_uno_online/acto_uno.xml
+
+#begin utilidades/tilemaps/acto_uno_online/suelos.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:utilidades/tilemaps/acto_uno_online/suelos.png
+

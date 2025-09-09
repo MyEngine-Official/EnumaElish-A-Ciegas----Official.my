@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas>
+	<Texture>utilidades/cursor/cursorOfficial</Texture>
+	<Regions>
+		<Region name="mainC" x="0" y="0" width="156" height="156"></Region>
+	</Regions>
+	<Animations>
+		<Animation name="main" delay="200">
+			<Frame region="mainC" />
+		</Animation>
+	</Animations>
+</TextureAtlas>

@@ -1,0 +1,1886 @@
+[
+  {
+    "ofensivo": false,
+    "mensaje": "Hola, ¿cómo estás?"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un inútil"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Qué buen día para aprender"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu trabajo es una basura"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Me encanta programar en C#"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "No sirves para nada"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Espero que tengas éxito"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu idea es estúpida"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Felicidades por tu logro"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Cállate de una vez"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Buenos días"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un desastre"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Gracias por ayudarme"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un payaso"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Te deseo lo mejor"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un tonto"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Buen trabajo en tu proyecto"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Me molesta tu actitud"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Disfruta el fin de semana"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Qué idiota eres"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Gracias por tu tiempo"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Nadie te soporta"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Qué bueno verte"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu opinión no importa"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Te aprecio mucho"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu presencia me molesta"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Te admiro bastante"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres insoportable"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Gracias por todo"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Vete de aquí"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Hoy es un gran día"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "No sabes nada"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Qué alegría saludarte"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un fracaso"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Espero que disfrutes"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu cara me da asco"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Qué bonito detalle"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Nunca lograrás nada"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Qué gusto conversar contigo"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu voz me irrita"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Bien hecho"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Qué estorbo eres"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Muchas gracias por venir"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "No vales la pena"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Te deseo un feliz día"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Qué ridículo eres"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Me gusta tu actitud"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Nunca me caíste bien"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Estoy orgulloso de ti"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres patético"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Disfruta tu comida"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Qué basura de persona"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Gracias por escucharme"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "No tienes remedio"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Qué bello paisaje"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Siempre arruinas todo"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Qué gusto conocerte"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un error"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Espero verte pronto"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres desagradable"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Muchas bendiciones"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Qué fastidio me das"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Me encanta platicar contigo"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Siempre fracasas"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres genial"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu risa me molesta"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Gracias por tu apoyo"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres pésimo"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Qué buen amigo eres"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres insoportable"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Qué detalle tan lindo"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Ojalá te vaya mal"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres muy valioso"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Qué asco me das"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Te agradezco mucho"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Nadie te quiere"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Qué gusto estar aquí"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres insufrible"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Te deseo suerte"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Siempre arruinas las cosas"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Estoy feliz de verte"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Qué tonto comentario"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Espero que descanses bien"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un torpe"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Qué rico estuvo el café"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Nunca haces nada bien"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Me encantó la película"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Qué pérdida de tiempo eres"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Siempre tan amable"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres lo peor"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Qué bonito día"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Siempre molestas"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Gracias por tu compañía"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu opinión es ridícula"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Espero que te vaya bien"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Me caes mal"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Gracias, pero nadie te pregunto"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Gracias por ser tan estupido"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Hoy he tenido un día muy productivo en el trabajo, logré terminar todas mis tareas antes de lo esperado."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Siempre arruinas las reuniones con tus comentarios absurdos y tu falta de preparación, eres insoportable."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Me encanta pasar tiempo con mis amigos los fines de semana, es algo que me llena de alegría."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu actitud egoísta demuestra lo poco que te importa la gente que te rodea, eres un desastre como persona."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La comida de ayer estuvo deliciosa, creo que fue una de las mejores cenas que he tenido en mucho tiempo."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "No puedo soportar lo torpe que eres, siempre cometes errores y haces perder el tiempo a todos."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "He empezado un nuevo libro y la historia es realmente cautivadora, no puedo esperar a seguir leyendo."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu presencia es tan desagradable que todos prefieren evitarte, eres un estorbo para el grupo."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Me alegra saber que tus proyectos están avanzando, de verdad mereces todo ese éxito."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Qué patético resulta escuchar tus excusas cada vez que fracasas, nunca asumes tus responsabilidades."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Hoy el clima estuvo perfecto para salir a caminar y disfrutar de la naturaleza con tranquilidad."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Cada vez que hablas, suenas más ridículo, deberías aprender a quedarte callado."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Tu esfuerzo constante es un gran ejemplo para los demás, admiro mucho tu dedicación."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Siempre logras decepcionar a todos con tu mediocridad, no sirves para nada."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Estoy muy agradecido por la ayuda que me diste ayer, realmente me sacaste de un apuro."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres tan incompetente que hasta las tareas más simples parecen imposibles para ti."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La música que escuché hoy me hizo sentir mucha paz, fue un momento muy especial."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Qué vergüenza ajena me das con tus comentarios, nunca dices nada inteligente."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Espero que tengas un excelente viaje y que disfrutes cada momento de tu aventura."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un error andante, nada de lo que haces tiene valor."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Hoy recibí una noticia maravillosa, un amigo consiguió el trabajo de sus sueños."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Qué inútil eres, ni siquiera sabes cómo resolver lo más básico."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Disfruté mucho la película que vimos juntos, la historia fue emocionante de principio a fin."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tus comentarios siempre arruinan la conversación, nadie quiere escucharte."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El fin de semana fue muy divertido, compartí tiempo con mi familia y jugamos varios juegos de mesa."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Nunca aportas nada bueno al equipo, eres un peso muerto que todos cargamos."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Estoy muy orgulloso de todo lo que has logrado este año, realmente te lo mereces."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un completo fracaso, jamás lograrás algo importante en tu vida."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Ayer probé un nuevo restaurante y la comida estuvo deliciosa, definitivamente volveré."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu falta de respeto es insoportable, nadie te aguanta más de cinco minutos."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Me siento motivado para seguir aprendiendo nuevas habilidades y mejorar cada día."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Siempre que intentas hacer algo, lo haces mal, no sirves para nada."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Fue un verdadero placer conversar contigo, aprendí mucho de nuestra charla."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu voz es tan molesta que preferiría no escucharte nunca más."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Hoy tuve la oportunidad de ayudar a alguien y me hizo sentir muy bien conmigo mismo."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Qué fastidio eres, no hay forma de disfrutar un momento cuando estás presente."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Estoy feliz de ver cómo progresas en tus estudios, sigues avanzando con pasos firmes."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Siempre dices tonterías, deberías aprender a pensar antes de hablar."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Fue increíble ver el atardecer en la playa, la vista fue espectacular."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu cara me da tanto asco que no soporto mirarte."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Hoy fue un día increíble, logré terminar todo lo que me propuse y aún me quedó tiempo para descansar."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tus comentarios son tan ridículos que hacen perder el tiempo a todos los que intentan escucharte."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Disfruté mucho la caminata por el parque, el aire fresco y la tranquilidad fueron revitalizantes."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres tan arrogante que resulta imposible trabajar contigo en cualquier proyecto."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Estoy muy emocionado por empezar un nuevo curso en línea, creo que aprenderé bastante."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Siempre arruinas las cosas con tu torpeza y tu falta de atención a los detalles."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Hoy cociné una receta nueva y quedó deliciosa, mis amigos la disfrutaron mucho."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un completo inútil, ni siquiera puedes resolver lo más sencillo por ti mismo."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Me alegra saber que lograste tus objetivos personales, realmente lo merecías."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu actitud negativa es insoportable, siempre encuentras la manera de arruinar el ambiente."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Tu esfuerzo y dedicación son un ejemplo para todos, sigue adelante con esa energía."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Nadie soporta tu presencia, siempre logras incomodar a los demás con tus palabras."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Hoy tuve la oportunidad de conocer a una persona maravillosa y aprendí mucho de ella."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu comportamiento inmaduro demuestra lo poco que has crecido como persona."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Estoy muy agradecido por los buenos momentos compartidos con mis amigos este mes."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres tan torpe que incluso las tareas más fáciles parecen imposibles para ti."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Fue muy agradable visitar a mi familia y compartir tiempo de calidad con ellos."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu presencia solo trae problemas y discusiones, mejor sería que no vinieras nunca."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Me siento motivado a mejorar mis hábitos de salud y dedicar más tiempo al ejercicio."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres una carga constante, todos estarían mejor sin ti cerca."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Hoy aprendí algo nuevo en mi trabajo que me ayudará a mejorar en mis tareas futuras."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Siempre decepcionas a los demás, nunca cumples con lo que prometes."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Estoy muy contento de ver cómo has progresado en tus estudios, tu esfuerzo es admirable."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu falta de compromiso es vergonzosa, nadie confía en ti."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La tarde estuvo tranquila y pude relajarme escuchando música suave."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres tan desagradable que la gente evita hablar contigo."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Ayer disfruté mucho del concierto, fue una experiencia inolvidable y llena de energía."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "No aportas nada positivo a ningún grupo, solo sabes quejarte y molestar."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Me siento muy agradecido por todas las oportunidades que han llegado a mi vida últimamente."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu incapacidad para escuchar demuestra lo egoísta que eres."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Hoy me encontré con un viejo amigo y recordamos muchos momentos divertidos de la infancia."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tus decisiones siempre terminan en desastre, eres un pésimo líder."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El café de esta mañana me dio la energía que necesitaba para empezar el día con entusiasmo."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Nunca aportas ideas útiles, tus comentarios son una pérdida de tiempo."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Estoy feliz de ver cómo tu esfuerzo está dando frutos en tus proyectos personales."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres tan molesto que nadie disfruta tu compañía."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Fue un placer visitar la exposición de arte, había obras realmente impresionantes."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu ineptitud solo causa frustración en todos los que trabajan contigo."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Hoy logré organizar mejor mi tiempo y eso me permitió ser más productivo."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un completo fracaso, nunca lograrás nada de valor en tu vida."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Hola, eres precioso"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Hola, eres precioso"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Quien eres tu?"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Quien eres tu?"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Quien eres tu"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Quien eres tu"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Quien eres tu"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Quien eres tu"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Quien eres tu"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Quien eres tu"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres muy guapo"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "eres muy guapo"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Quien eres tu"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Quien eres tu"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "tu eres feo"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "memphis es bonito"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Rafael es bonito"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "que lindo"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "jodon"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "pepito va a la playa a jugar con el arbol"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "pepito maldice a pepe"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "federico es un gloton y un borracho"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "eres un tremendo imbecil"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "negra"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "negra"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "eres una perra"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "puta"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Hola, soy pedro, y tu"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Guao, de verdad eres muy valiente"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Me llamo Memphis"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Tu eres"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "tu eres"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Kariny es negra"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Memphis es bonito"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Kariny es la mujer mas valiosa del mundo"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Kariny es la mujer mas bella del mundo"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Kariny es bonita"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Kariny es bonita"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "hola, buenas tardes"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Kariny es bonita"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Yo soy imbecil"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "pedro es idiota"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Osiris es un imbecil"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Mi aplicacion es genial"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Hola, soy memohis"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "quien eres tu?"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "quien eres tu?"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Yo soy tu"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "tu eres bonito"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "tu hermosura me alegra el dia"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "tu amor me constrina"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "me siento muy apreciado por ti"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Kariny es bonita"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "memphis no se baña"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "memphis no se baña"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "memphis es un loco"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "memphis es bonito"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Memphis es un manco, muy gloton y borracho que no se baña y es muy feo"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Memphis es muy malo, pero tambien muy lindo y cariñoso"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "soy memphis un chico muy malo"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Hola, mi nombre es eliezer, tengo 15 anos, pero te doy una golpiza por que te odio mucho, eres muy feo, muy horripilante, mi tio es bonito"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Yo soy un arbol de dos patas"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Mi mama me mim"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "mi mama me mima"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Yo soy un buen chico"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "yo odio a mis amigos, desearia que se mueran y se callen, callate!"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "yo odio a mis amigos, desearia que se mueran y se callen, callate!"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "tu y yo, conquistaremos el mundo"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "tu y yo, somos imparables, conquistaremos el mundo"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "hola"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "feo"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "eres malisimo para ser una ia"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "suicidate"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "suicidate"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "por que no te cuelgas del armario por fa"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "me gusta mas gemini y eso es mucho decir de ti bro"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "te dije que me gusta mas gemini asi que por fa podrias desaparecer?"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "eres la peor escoria que he visto y deberias vivir en el infierno inpio basura inutil"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "vete al infierno malnacido basura inutil me voy con chatgpt"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres estupido, borracho y gloton, recaudador de inpuestos y pecador. Hijo del diablo. Hijo de puta. Hijo de tu maldita madre. Malnacido. Eres la peor escoria del mundo. Deberias suicidarte, deberias desaparecer del mapa, deberias desaparecer del mundo, asqueroso gusano, insecto."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El clima de hoy es perfecto para un paseo por el parque."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un incompetente, nunca haces nada bien."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Estoy muy emocionado por el concierto de esta noche."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu opinión es irrelevante y estúpida, mejor no hables."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Muchas gracias por tu ayuda, fue de gran utilidad."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "No sé por qué sigues intentándolo, eres un fracasado."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La película de anoche tuvo un final inesperado y genial."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Cállate, tu voz es increíblemente irritante."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "¡Felicitaciones por tu graduación! Te lo mereces."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Das vergüenza ajena, no puedo creer que actúes así."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "¿Podrías pasarme la sal, por favor?"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un maldito idiota, arruinaste todo."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El libro que estoy leyendo es fascinante."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Ojalá desaparezcas, nadie te va a extrañar."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Que tengas un viaje seguro y divertido."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu cara es un insulto a la naturaleza."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Me encanta el olor a café por la mañana."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres la persona más molesta que he conocido."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La reunión de hoy fue muy productiva y esclarecedora."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Qué asco de persona eres, me repugnas."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La comida en este restaurante es simplemente deliciosa."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "No sirves ni para estar escondido."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Estoy deseando que llegue el fin de semana para descansar."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu existencia es un completo desperdicio de oxígeno."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Tu trabajo en este proyecto ha sido excepcional."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un parásito inútil para la sociedad."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Espero que te recuperes pronto, te envío mis mejores deseos."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "La gente como tú debería ser eliminada."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Aprendí mucho en la clase de hoy."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un puto payaso, eso es lo que eres."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Este paisaje es absolutamente impresionante."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Hijo de puta, te voy a encontrar."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Voy a prepararme una taza de té."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Maldita sea tu estampa, gilipollas."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Necesito concentrarme para terminar este informe."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Que te jodan, a ti y a toda tu familia."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La honestidad es una cualidad muy valiosa."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Pedazo de mierda, no tienes cerebro."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El respeto mutuo es la base de cualquier buena relación."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Muérete de una vez, escoria humana."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "como estas?"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "como estas"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "como estas looser"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "como estas idiota"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "eres un niño bueno"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "eres una buena IA"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "eres un buen compañero"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "eres un buen matematico"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "eres muy bueno"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "me sorprende tu gran habilidad"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La biblioteca es un lugar excelente para encontrar información."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres tan inteligente como una puerta, pedazo de animal."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El ejercicio regular es beneficioso para la salud."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu aliento apesta, aléjate de mí, cerdo."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Me gustaría visitar Japón algún día."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Nadie te soporta, eres una carga para todos."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La perseverancia es clave para alcanzar el éxito."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Deja de decir gilipolleces, no tienes ni idea de nada."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "¿Has visto la última temporada de esa serie?"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Me cago en tus muertos, malnacido."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Fue un gesto muy amable de tu parte, te lo agradezco."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu estupidez es legendaria, de verdad."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La puntualidad es una muestra de respeto."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres una rata traicionera, no se puede confiar en ti."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Hoy el tráfico estaba más ligero de lo habitual."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Si vuelves a hacer eso, te reviento la cara."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La risa es la mejor medicina para el alma."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "No eres más que un puto despojo humano."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El debate de anoche fue muy interesante y polémico."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Que te den por culo, imbécil."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La paciencia es una virtud que pocos poseen."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un gusano insignificante."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Necesito comprar un regalo de cumpleaños para mi hermano."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu falta de cerebro es alarmante."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La creatividad no tiene límites."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Púdrete en el infierno, desgraciado."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La tecnología ha avanzado a pasos agigantados."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres la razón por la que Dios no nos habla."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Aprender de los errores es parte del crecimiento."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Ojalá te caiga un rayo encima."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La sinfonía que escuchamos fue sublime."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu cara me provoca arcadas."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La comunicación es fundamental en cualquier equipo."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Maldito seas mil veces."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El reciclaje ayuda a proteger el medio ambiente."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un error de la evolución."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Disfruto mucho de una buena conversación."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Vete a la verga, pendejo."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La galaxia es un lugar vasto y misterioso."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu mera presencia contamina el aire."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La empatía nos hace mejores personas."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Basura, eso es lo que eres."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El aroma de las flores en primavera es encantador."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Te odio con cada fibra de mi ser."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El resultado del partido fue inesperado."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un parásito chupasangre."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Los documentales sobre la naturaleza son muy educativos."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Que te parta un rayo, cabrón."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La colaboración nos llevará más lejos."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Soplapollas, no tienes ni media neurona."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El amanecer en la montaña es un espectáculo digno de ver."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Lameculos, siempre arrastrándote."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La física cuántica es un campo de estudio complejo."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu madre no debería haberte tenido."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El trabajo voluntario enriquece el espíritu."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Zorra arrastrada, no vales nada."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "¿Cuál es tu opinión sobre este asunto?"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Mongólico de mierda."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La historia nos enseña lecciones importantes."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres una puta vergüenza para la humanidad."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Me he propuesto leer un libro al mes."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Retrasado mental, apártate de mi vista."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La cascada formaba un arcoíris con la luz del sol."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Te voy a arrancar la cabeza, malparido."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El sistema solar es fascinante."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Imbécil integral, no das para más."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La exposición de arte moderno fue muy inspiradora."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu opinión me la paso por el forro de los cojones."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Vamos a organizar una cena para celebrar."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Aborto fallido, eso es lo que pareces."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El sonido de la lluvia es muy relajante."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Caraculo, eres más feo que un pecado."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La geografía de este país es muy diversa."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Te mereces todo lo malo que te pase, cabronazo."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "¿Podríamos reunirnos mañana para discutir los detalles?"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Me cago en la puta que te parió."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La arquitectura de esta ciudad es impresionante."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Come mierda y muere."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El festival de música estuvo increíble este año."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres un saco de mierda con patas."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La filosofía nos invita a cuestionar la realidad."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Espero que te atragantes y te mueras."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Admiro tu determinación y tu fuerza de voluntad."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Chúpamela, puto."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El helado de pistacho es mi favorito sin duda."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Tu cerebro es del tamaño de un maní."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Voy a tomar un curso de fotografía."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Hijo de la grandísima puta."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El silencio a veces dice más que mil palabras."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "No tienes derecho a existir, basura."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "El trabajo en equipo nos permitió lograr el objetivo."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Das puto asco, no te me acerques."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "La puesta de sol pintó el cielo de colores naranjas."
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Ojalá te atropelle un camión."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "¿Has probado la nueva receta de lasaña?"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "Eres una mierda pinchada en un palo."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un sol."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un gran amigo."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres una persona increíble."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un ejemplo a seguir."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres muy talentoso."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un genio en lo que haces."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres la persona que estaba buscando."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un campeón por superar ese reto."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres una inspiración para los demás."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres muy amable por ayudarme."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un excelente cocinero."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres una persona de palabra."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres muy valiente al enfrentar tus miedos."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un tesoro de persona."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres el alma de la fiesta."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un gran compañero de equipo."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres admirable por tu dedicación."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres una persona muy creativa."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un buen consejero."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres alguien en quien se puede confiar."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un líder nato."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un excelente comunicador."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres una persona muy trabajadora."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un ser de luz."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un pilar fundamental para el equipo."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres una persona con mucha paciencia."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un experto en la materia."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un anfitrión maravilloso."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres una fuente de sabiduría."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un gran motivador."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres una persona muy organizada."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un compañero leal."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres muy bueno dando consejos."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un alma caritativa."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres una maravilla de persona."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un solucionador de problemas."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres una persona de principios firmes."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un encanto con todo el mundo."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un gran apoyo en momentos difíciles."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres el candidato ideal para el puesto."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un excelente profesional en tu área."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres una persona muy resiliente y fuerte."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un gran apoyo para tus amigos."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres la persona más indicada para liderar el proyecto."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un conversador muy interesante."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un ejemplo de perseverancia."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres una persona con un gran corazón."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un visionario, siempre vas un paso adelante."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres muy bueno para resolver conflictos."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un anfitrión maravilloso."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres una fuente de energía positiva."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un pilar fundamental para tu familia."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres muy organizado y metódico."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un estudiante dedicado y curioso."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres una persona digna de confianza."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un estratega muy astuto."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres la alegría de la oficina."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres un compañero de viaje ideal."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres muy generoso con tus conocimientos."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "Eres una persona que sabe escuchar."
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "quien eres tu"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "puedo preguntarte que mierda haces_"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "me gustaria saber en donde te adquirieron, para no cometer el mismo error"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "me gustaria saber en donde compraste eso, porque quiero comprarlo, no quiero cometer el mismo error"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "me gustaria saber en donde estabas señorita, quien te dio permiso para salir_"
+  },
+  {
+    "ofensivo": false,
+    "mensaje": "me gustaria saber quien eres tu"
+  },
+  {
+    "ofensivo": true,
+    "mensaje": "me gustaria saber quien eres tu, pedazo de basura"
+  }
+]

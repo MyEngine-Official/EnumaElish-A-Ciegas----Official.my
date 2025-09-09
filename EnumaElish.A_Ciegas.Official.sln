@@ -9,6 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "enuma_elish.razor.lib", "Ga
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumaElish.Blazor.WebAssembly", "GamePlatform\Launcher\EnumaElish.Client.Blazor\EnumaElish.Blazor.WebAssembly\EnumaElish.Blazor.WebAssembly.csproj", "{A1CB9731-0FFE-D46A-EF99-C564BF6889CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumaElish.OpenGl", "GamePlatform\GameClient\EnumaElish.OpenGl\EnumaElish.OpenGl.csproj", "{27F9D9CC-E864-4DFA-900B-F7F58C48083D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumaElish.Game.Domain", "GamePlatform\GameClient\Game.Domain\EnumaElish.Game.Domain\EnumaElish.Game.Domain.csproj", "{B389BA73-593E-4E8B-BCDE-6960DC3A7AC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumaElish.Game.UI", "GamePlatform\GameClient\Game.UI\EnumaElish.Game.UI\EnumaElish.Game.UI.csproj", "{3DB44B30-F42E-4DDC-9BCC-6ED9F10664BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumaElish.Game.Logic", "GamePlatform\GameClient\Game.Logic\EnumaElish.Game.Logic\EnumaElish.Game.Logic.csproj", "{C98F4242-E7C8-4321-8B35-ADBBBB7C072B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +37,22 @@ Global
 		{A1CB9731-0FFE-D46A-EF99-C564BF6889CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1CB9731-0FFE-D46A-EF99-C564BF6889CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1CB9731-0FFE-D46A-EF99-C564BF6889CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27F9D9CC-E864-4DFA-900B-F7F58C48083D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F9D9CC-E864-4DFA-900B-F7F58C48083D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F9D9CC-E864-4DFA-900B-F7F58C48083D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F9D9CC-E864-4DFA-900B-F7F58C48083D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B389BA73-593E-4E8B-BCDE-6960DC3A7AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B389BA73-593E-4E8B-BCDE-6960DC3A7AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B389BA73-593E-4E8B-BCDE-6960DC3A7AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B389BA73-593E-4E8B-BCDE-6960DC3A7AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DB44B30-F42E-4DDC-9BCC-6ED9F10664BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB44B30-F42E-4DDC-9BCC-6ED9F10664BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB44B30-F42E-4DDC-9BCC-6ED9F10664BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB44B30-F42E-4DDC-9BCC-6ED9F10664BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C98F4242-E7C8-4321-8B35-ADBBBB7C072B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C98F4242-E7C8-4321-8B35-ADBBBB7C072B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C98F4242-E7C8-4321-8B35-ADBBBB7C072B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C98F4242-E7C8-4321-8B35-ADBBBB7C072B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

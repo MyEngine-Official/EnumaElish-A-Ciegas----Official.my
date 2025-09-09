@@ -1,0 +1,6 @@
+@EnumaElish.LightApi_HostAddress = http://localhost:5118
+
+GET {{EnumaElish.LightApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

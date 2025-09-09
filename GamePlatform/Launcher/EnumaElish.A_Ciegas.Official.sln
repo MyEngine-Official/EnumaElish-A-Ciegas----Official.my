@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumaElish.Client.Desktop", "GamePlatform\Launcher\EnumaElish.Client.Maui\EnumaElish.Client.Desktop.csproj", "{EEFB58B2-CAE3-D071-93B8-1D5EDF3A1769}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "enuma_elish.razor.lib", "GamePlatform\Launcher\Launcher.UI\enuma_elish.razor.lib\enuma_elish.razor.lib.csproj", "{B2F5AB4F-7C59-54C1-4220-E7A468A40126}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumaElish.Blazor.WebAssembly", "GamePlatform\Launcher\EnumaElish.Client.Blazor\EnumaElish.Blazor.WebAssembly\EnumaElish.Blazor.WebAssembly.csproj", "{A1CB9731-0FFE-D46A-EF99-C564BF6889CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEFB58B2-CAE3-D071-93B8-1D5EDF3A1769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEFB58B2-CAE3-D071-93B8-1D5EDF3A1769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEFB58B2-CAE3-D071-93B8-1D5EDF3A1769}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{EEFB58B2-CAE3-D071-93B8-1D5EDF3A1769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEFB58B2-CAE3-D071-93B8-1D5EDF3A1769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEFB58B2-CAE3-D071-93B8-1D5EDF3A1769}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B2F5AB4F-7C59-54C1-4220-E7A468A40126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2F5AB4F-7C59-54C1-4220-E7A468A40126}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2F5AB4F-7C59-54C1-4220-E7A468A40126}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2F5AB4F-7C59-54C1-4220-E7A468A40126}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1CB9731-0FFE-D46A-EF99-C564BF6889CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1CB9731-0FFE-D46A-EF99-C564BF6889CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1CB9731-0FFE-D46A-EF99-C564BF6889CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1CB9731-0FFE-D46A-EF99-C564BF6889CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FBAEE8E-C826-46C5-A02B-719DC4F678A5}
+	EndGlobalSection
+EndGlobal
