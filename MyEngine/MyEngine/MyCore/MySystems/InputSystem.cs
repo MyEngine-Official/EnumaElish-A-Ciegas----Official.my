@@ -1,15 +1,18 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
-using MyEngine_Core.ECS.MyComponents;
-using MyEngine_Core.ECS.MyEntities;
+using MyEngine.MyCore.MyComponents;
+using MyEngine.MyCore.MyEntities;
 
-namespace MyEngine_Core.ECS.MySystems
+namespace MyEngine.MyCore.MySystems
 {
-    public class InputSystem : ISystem
+    public class InputSystem
     {
-        private World _world;
+        private WorldManager _world;
         private KeyboardState _previousKeyboardState;
         private KeyboardState _currentKeyboardState;
         private MouseState _previousMouseState;
@@ -23,7 +26,7 @@ namespace MyEngine_Core.ECS.MySystems
             _currentGamePadStates = new GamePadState[4];
         }
 
-        public void Initialize(World world)
+        public void Initialize(WorldManager world)
         {
             _world = world;
         }
@@ -36,7 +39,7 @@ namespace MyEngine_Core.ECS.MySystems
             // Update states
             _previousKeyboardState = _currentKeyboardState;
             _currentKeyboardState = Keyboard.GetState();
-            
+
             _previousMouseState = _currentMouseState;
             _currentMouseState = Mouse.GetState();
 
@@ -47,8 +50,8 @@ namespace MyEngine_Core.ECS.MySystems
             }
 
             // Process input for entities with InputComponent
-            var inputEntities = _world.GetEntitiesWithComponents<InputComponent>();
-            
+            var inputEntities = _world.GetEntitiesWithComponents<InputComponent, RigidbodyComponent>();
+
             foreach (var entity in inputEntities)
             {
                 var input = entity.GetComponent<InputComponent>();
@@ -56,30 +59,32 @@ namespace MyEngine_Core.ECS.MySystems
             }
         }
 
-        private void ProcessEntityInput(EntidadPadre entity, InputComponent input, GameTime gameTime)
+
+        private void ProcessEntityInput(MainEntity entity, InputComponent input, GameTime gameTime)
         {
             if (!input.IsEnabled) return;
 
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
-
             // Process keyboard input
             if (input.UseKeyboard)
             {
+                Vector2 vel = entity.GetComponent<RigidbodyComponent>().Velocity;
+                
                 Vector2 movement = Vector2.Zero;
 
                 if (IsKeyDown(input.MoveUpKey))
-                    movement.Y -= 1;
+                    movement.Y -= vel.Y;
                 if (IsKeyDown(input.MoveDownKey))
-                    movement.Y += 1;
+                    movement.Y += vel.Y;
                 if (IsKeyDown(input.MoveLeftKey))
-                    movement.X -= 1;
+                    movement.X -= vel.X;
                 if (IsKeyDown(input.MoveRightKey))
-                    movement.X += 1;
+                    movement.X += vel.X;
 
                 if (movement != Vector2.Zero)
                 {
                     movement.Normalize();
-                    ApplyMovement(entity, movement, input.MoveSpeed, deltaTime);
+                    ApplyMovement(entity, movement, vel, deltaTime);
                 }
 
                 // Check action keys
@@ -98,12 +103,12 @@ namespace MyEngine_Core.ECS.MySystems
             if (input.UseGamepad && input.GamepadIndex < 4)
             {
                 var gamePadState = _currentGamePadStates[input.GamepadIndex];
-                
+
                 if (gamePadState.IsConnected)
                 {
                     Vector2 leftStick = gamePadState.ThumbSticks.Left;
                     leftStick.Y *= -1; // Invert Y axis
-                    
+
                     if (leftStick.LengthSquared() > 0.1f * 0.1f) // Dead zone
                     {
                         ApplyMovement(entity, leftStick, input.MoveSpeed, deltaTime);
@@ -126,7 +131,7 @@ namespace MyEngine_Core.ECS.MySystems
             {
                 var transform = entity.GetComponent<TransformComponent>();
                 input.MousePosition = new Vector2(_currentMouseState.X, _currentMouseState.Y);
-                
+
                 if (input.FollowMouse)
                 {
                     Vector2 direction = input.MousePosition - transform.Position;
@@ -144,22 +149,6 @@ namespace MyEngine_Core.ECS.MySystems
             }
         }
 
-        private void ApplyMovement(EntidadPadre entity, Vector2 direction, float speed, float deltaTime)
-        {
-            if (entity.HasComponent<RigidbodyComponent>())
-            {
-                // Apply force to rigidbody
-                var rigidbody = entity.GetComponent<RigidbodyComponent>();
-                rigidbody.Velocity += direction * speed * deltaTime;
-            }
-            else if (entity.HasComponent<TransformComponent>())
-            {
-                // Direct position update
-                var transform = entity.GetComponent<TransformComponent>();
-                transform.Position += direction * speed * deltaTime;
-            }
-        }
-
         // Input query methods
         public bool IsKeyDown(Keys key) => _currentKeyboardState.IsKeyDown(key);
         public bool IsKeyUp(Keys key) => _currentKeyboardState.IsKeyUp(key);
@@ -167,34 +156,28 @@ namespace MyEngine_Core.ECS.MySystems
         public bool WasKeyJustReleased(Keys key) => !_currentKeyboardState.IsKeyDown(key) && _previousKeyboardState.IsKeyDown(key);
 
         public bool IsButtonDown(int playerIndex, Buttons button) => _currentGamePadStates[playerIndex].IsButtonDown(button);
-        public bool WasButtonJustPressed(int playerIndex, Buttons button) => 
-            _currentGamePadStates[playerIndex].IsButtonDown(button) && 
+        public bool WasButtonJustPressed(int playerIndex, Buttons button) =>
+            _currentGamePadStates[playerIndex].IsButtonDown(button) &&
             !_previousGamePadStates[playerIndex].IsButtonDown(button);
 
         public bool WasMouseButtonJustPressed(MouseButton button)
         {
             return button switch
             {
-                MouseButton.Left => _currentMouseState.LeftButton == ButtonState.Pressed && 
+                MouseButton.Left => _currentMouseState.LeftButton == ButtonState.Pressed &&
                                    _previousMouseState.LeftButton == ButtonState.Released,
-                MouseButton.Right => _currentMouseState.RightButton == ButtonState.Pressed && 
+                MouseButton.Right => _currentMouseState.RightButton == ButtonState.Pressed &&
                                     _previousMouseState.RightButton == ButtonState.Released,
-                MouseButton.Middle => _currentMouseState.MiddleButton == ButtonState.Pressed && 
+                MouseButton.Middle => _currentMouseState.MiddleButton == ButtonState.Pressed &&
                                      _previousMouseState.MiddleButton == ButtonState.Released,
                 _ => false
             };
         }
-
-        public Vector2 GetMousePosition() => new Vector2(_currentMouseState.X, _currentMouseState.Y);
-        public Vector2 GetMouseDelta() => new Vector2(
-            _currentMouseState.X - _previousMouseState.X, 
-            _currentMouseState.Y - _previousMouseState.Y);
-    }
-
-    public enum MouseButton
-    {
-        Left,
-        Right,
-        Middle
+        public enum MouseButton
+        {
+            Left,
+            Right,
+            Middle
+        }
     }
 }

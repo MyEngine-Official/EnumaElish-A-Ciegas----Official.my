@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyEngine_Core", "MyEngine_C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoGameLibrary", "..\..\GamePlatform\GameClient\EEGame.Logic\GameEngine\MonoGameLibrary.csproj", "{93836867-51D8-2B95-9E76-55FFD8C47A34}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyEngineDemoGameImplementation", "..\MyEngineDemoGameImplementation\MyEngineDemoGameImplementation.csproj", "{4FD478BD-039D-4625-AD2A-BE543AB91D5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyEngine", "..\MyEngine\MyEngine.csproj", "{658E4CAB-98DB-6AB0-998B-4D67B7EA183B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{93836867-51D8-2B95-9E76-55FFD8C47A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93836867-51D8-2B95-9E76-55FFD8C47A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93836867-51D8-2B95-9E76-55FFD8C47A34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FD478BD-039D-4625-AD2A-BE543AB91D5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD478BD-039D-4625-AD2A-BE543AB91D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD478BD-039D-4625-AD2A-BE543AB91D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD478BD-039D-4625-AD2A-BE543AB91D5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{658E4CAB-98DB-6AB0-998B-4D67B7EA183B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{658E4CAB-98DB-6AB0-998B-4D67B7EA183B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{658E4CAB-98DB-6AB0-998B-4D67B7EA183B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{658E4CAB-98DB-6AB0-998B-4D67B7EA183B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,17 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using MyEngine_Core.ECS.MyComponents;
-using MyEngine_Core.ECS.MyEntities;
-using MyEngine_Core.MyGraphics;
+using MyEngine.MyCore.MyComponents;
+using MyEngine.MyCore.MyEntities;
 
-namespace MyEngine_Core.ECS.MySystems
+
+namespace MyEngine.MyCore.MySystems
 {
     public class AnimationSystem : ISystem
     {
-        private World _world;
+        private WorldManager _world;
 
-        public void Initialize(World world)
+        public void Initialize(WorldManager world)
         {
             _world = world;
         }
@@ -70,7 +69,7 @@ namespace MyEngine_Core.ECS.MySystems
         /// <summary>
         /// Plays an animation for an entity
         /// </summary>
-        public static void PlayAnimation(EntidadPadre entity, string animationName, bool loop = true)
+        public static void PlayAnimation(MainEntity entity, string animationName, bool loop = true)
         {
             if (!entity.HasComponent<AnimationComponent>())
                 return;
@@ -102,7 +101,7 @@ namespace MyEngine_Core.ECS.MySystems
         /// <summary>
         /// Stops the current animation
         /// </summary>
-        public static void StopAnimation(EntidadPadre entity)
+        public static void StopAnimation(MainEntity entity)
         {
             if (!entity.HasComponent<AnimationComponent>())
                 return;
@@ -114,7 +113,7 @@ namespace MyEngine_Core.ECS.MySystems
         /// <summary>
         /// Pauses the current animation
         /// </summary>
-        public static void PauseAnimation(EntidadPadre entity)
+        public static void PauseAnimation(MainEntity entity)
         {
             if (!entity.HasComponent<AnimationComponent>())
                 return;
@@ -126,7 +125,7 @@ namespace MyEngine_Core.ECS.MySystems
         /// <summary>
         /// Resumes the current animation
         /// </summary>
-        public static void ResumeAnimation(EntidadPadre entity)
+        public static void ResumeAnimation(MainEntity entity)
         {
             if (!entity.HasComponent<AnimationComponent>())
                 return;

@@ -1,89 +1,38 @@
 ﻿using System;
-using System.Diagnostics;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
-using MyEngine_Core.ECS.MyComponents;
-using MyEngine_Core.ECS.MyEntities;
+using MyEngine.MyCore.MyComponents;
+using MyEngine.MyCore.MyEntities;
 
-namespace MyEngine_Core.ECS.MySystems
+namespace MyEngine.MyCore.MySystems
 {
-    public class PhysicsSystem : ISystem
+    public class PhysicsSystem
     {
-        private World _world;
-        private Vector2 _gravity = new Vector2(0, 980f); // Default gravity (pixels per second squared)
-        private float _damping = 0.99f; // Velocity damping factor
+        private WorldManager _world;
 
-
-
-        // ✅ NUEVA PROPIEDAD: Control de gravedad
-        public bool GravityEnabled { get; set; } = true;
-
-        // ✅ NUEVA PROPIEDAD: Gravedad configurable
-        public Vector2 Gravity
-        {
-            get => _gravity;
-            set => _gravity = value;
-        }
-
-        public PhysicsSystem()
-        {
-        }
-
-        // ✅ MÉTODO PARA CONFIGURAR MODO TOP-DOWN
-        public void SetTopDownMode()
-        {
-            GravityEnabled = false;
-            _gravity = Vector2.Zero;
-            _damping = 0.95f; // Más damping para detener movimiento gradualmente
-        }
-
-        // ✅ MÉTODO PARA CONFIGURAR MODO PLATAFORMAS
-        public void SetPlatformerMode()
-        {
-            GravityEnabled = true;
-            _gravity = new Vector2(0, 980f);
-            _damping = 0.99f;
-        }
-
-        public void Initialize(World world)
+        public void Initialize(WorldManager world)
         {
             _world = world;
         }
 
-        /// <summary>
-        /// Gets or sets the damping factor (0-1)
-        /// </summary>
-        public float Damping
-        {
-            get => _damping;
-            set => _damping = MathHelper.Clamp(value, 0f, 1f);
-        }
-
-        /// <summary>
-        /// Updates physics for all entities with rigidbody components
-        /// </summary>
         public void Update(GameTime gameTime)
         {
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            
-            // Get all entities with both Transform and Rigidbody components
-            var physicsEntities = _world.GetEntitiesWithComponents<TransformComponent, RigidbodyComponent>();
 
-            foreach (var entity in physicsEntities)
+            var entities = _world.GetEntitiesWithComponents<TransformComponent, RigidbodyComponent>();
+
+            foreach (var entity in entities)
             {
+
                 var transform = entity.GetComponent<TransformComponent>();
                 var rigidbody = entity.GetComponent<RigidbodyComponent>();
 
-                // Apply gravity if mass is greater than 0
-                if (GravityEnabled && rigidbody.Mass > 0)
-                {
-                    rigidbody.Velocity += _gravity * deltaTime;
-                }
-
-                // Apply damping
-                rigidbody.Velocity *= _damping;
-
                 // Update position based on velocity
                 transform.Position += rigidbody.Velocity * deltaTime;
+
 
                 // Check for collision components if needed
                 if (entity.HasComponent<ColliderComponent>())
@@ -98,11 +47,11 @@ namespace MyEngine_Core.ECS.MySystems
         /// <summary>
         /// Checks collisions between entities
         /// </summary>
-        private void CheckCollisions(EntidadPadre entity, TransformComponent transform, 
+        private void CheckCollisions(MainEntity entity, TransformComponent transform,
             RigidbodyComponent rigidbody, ColliderComponent collider)
         {
             var otherEntities = _world.GetEntitiesWithComponents<TransformComponent, ColliderComponent>();
-            
+
             foreach (var other in otherEntities)
             {
                 if (other.Id == entity.Id) continue;
@@ -127,6 +76,7 @@ namespace MyEngine_Core.ECS.MySystems
             }
         }
 
+
         /// <summary>
         /// Gets the bounding rectangle for collision detection
         /// </summary>
@@ -140,24 +90,19 @@ namespace MyEngine_Core.ECS.MySystems
             );
         }
 
-        /// <summary>
-        /// Resolves collision between two entities
-        /// </summary>
-        private void ResolveCollision(EntidadPadre entity1, EntidadPadre entity2, 
-            Rectangle bounds1, Rectangle bounds2, RigidbodyComponent rigidbody1, ColliderComponent collider2)
+        private void ResolveCollision(MainEntity entity1, MainEntity entity2,
+          Rectangle bounds1, Rectangle bounds2, RigidbodyComponent rigidbody1, ColliderComponent collider2)
         {
-
             // Si es un trigger, no resolver físicamente
             if (collider2.IsTrigger) return;
             // Calculate overlap
             Rectangle intersection = Rectangle.Intersect(bounds1, bounds2);
-            
-            // Simple collision response - push entity1 out of entity2
             var transform1 = entity1.GetComponent<TransformComponent>();
 
             // ✅ RESOLUCIÓN MEJORADA PARA TOP-DOWN
             // Calcular el vector de separación mínima
             Vector2 separation;
+
 
             if (intersection.Width < intersection.Height)
             {
@@ -194,8 +139,10 @@ namespace MyEngine_Core.ECS.MySystems
             transform1.Position += separation;
         }
 
+
+
         // ✅ MÉTODO AUXILIAR: Detener completamente una entidad
-        public void StopEntity(EntidadPadre entity)
+        public void StopEntity(MainEntity entity)
         {
             if (entity.HasComponent<RigidbodyComponent>())
             {
@@ -205,7 +152,7 @@ namespace MyEngine_Core.ECS.MySystems
         }
 
         // ✅ MÉTODO AUXILIAR: Mover hacia una dirección
-        public void MoveTowards(EntidadPadre entity, Vector2 direction, float speed)
+        public void MoveTowards(MainEntity entity, Vector2 direction, float speed)
         {
             if (entity.HasComponent<RigidbodyComponent>())
             {
@@ -218,7 +165,7 @@ namespace MyEngine_Core.ECS.MySystems
         /// <summary>
         /// Applies an impulse force to an entity
         /// </summary>
-        public void ApplyImpulse(EntidadPadre entity, Vector2 impulse)
+        public void ApplyImpulse(MainEntity entity, Vector2 impulse)
         {
             if (entity.HasComponent<RigidbodyComponent>())
             {
@@ -233,7 +180,7 @@ namespace MyEngine_Core.ECS.MySystems
         /// <summary>
         /// Applies a continuous force to an entity
         /// </summary>
-        public void ApplyForce(EntidadPadre entity, Vector2 force, float deltaTime)
+        public void ApplyForce(MainEntity entity, Vector2 force, float deltaTime)
         {
             if (entity.HasComponent<RigidbodyComponent>())
             {

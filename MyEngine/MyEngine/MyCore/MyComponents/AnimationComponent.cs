@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using MyEngine_Core.ECS.MyEntities;
-using MyEngine_Core.MyGraphics;
+using MyEngine.MyCore.MyEntities;
+using MyEngine.MyGraphics;
 
-namespace MyEngine_Core.ECS.MyComponents
+namespace MyEngine.MyCore.MyComponents
 {
     /// <summary>
     /// Enhanced animation component with multiple animations support
@@ -19,8 +19,8 @@ namespace MyEngine_Core.ECS.MyComponents
         public bool IsLooping { get; set; }
 
         // Animation events
-        public Action<EntidadPadre> OnAnimationComplete { get; set; }
-        public Action<EntidadPadre> OnAnimationLoop { get; set; }
+        public Action<MainEntity> OnAnimationComplete { get; set; }
+        public Action<MainEntity> OnAnimationLoop { get; set; }
 
         public AnimationComponent()
         {

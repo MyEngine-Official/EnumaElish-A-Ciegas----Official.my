@@ -94,7 +94,7 @@ namespace MyEngine_Core
             _inputSystem.Initialize(_world);
 
             // Create sample entities for testing
-            CreateSampleEntities();
+            //CreateSampleEntities();
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace MyEngine_Core
             // Add collider component
             player.AddComponent(new ColliderComponent(32, 32)
             {
-                Tag = "Player"
+                Tag = "Player",
             });
 
             // Add input component

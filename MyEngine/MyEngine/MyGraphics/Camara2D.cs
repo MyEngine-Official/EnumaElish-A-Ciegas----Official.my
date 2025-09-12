@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace MyEngine_Core.MyGraphics
+namespace MyEngine.MyGraphics
 {
     public class Camara2D
     {

@@ -26,3 +26,4 @@ Espero que si ese día llega, encontremos algo más grande, algo que parezca ins
 ¡Hola de nuevo! Presten atención, no tenemos tiempo. ¿Recuerdan lo de enviar un video vestidos de negro? Pues lo hicimos, y ahora encabronamos a Gringolandia y nos cae la marina con una decena de submarinos nucleares. ¡Sálvese quien pueda!
 
 Me siento mal por involucrar a mi país, pero los gringos piensan que el ataque al pentágono fue tan imposible que el país completo debió estar involucrado. Aghh, todo porque puse "Viva la República Dominicana como pantalla de bienvenida en el virus"
+
