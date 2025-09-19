@@ -1,0 +1,92 @@
+{
+  "cascadeColors": false,
+  "colorBackground": false,
+  "palette": [
+    {
+      "id": "UpctKBTQ-Vla1z1TvYbBY",
+      "name": "Fuccia",
+      "value": "#cb157f"
+    },
+    {
+      "id": "eEkrLjgIJiTshdIixcOWy",
+      "name": "violet",
+      "value": "#8903ba"
+    },
+    {
+      "id": "ryzhirDmncg6OVnkmHf7k",
+      "name": "Aqua",
+      "value": "#0ee1de"
+    },
+    {
+      "id": "zX_FzGmchOBLVMs5lrFrG",
+      "name": "Yotsuba",
+      "value": "#ff780a"
+    }
+  ],
+  "fileColors": [
+    {
+      "path": "Libro Matematicas 3D para Videojuegos",
+      "color": "ryzhirDmncg6OVnkmHf7k"
+    },
+    {
+      "path": "EnumaElishBook",
+      "color": "zX_FzGmchOBLVMs5lrFrG"
+    },
+    {
+      "path": "GamePlatform",
+      "color": "zX_FzGmchOBLVMs5lrFrG"
+    },
+    {
+      "path": "IA",
+      "color": "zX_FzGmchOBLVMs5lrFrG"
+    },
+    {
+      "path": "scripts",
+      "color": "eEkrLjgIJiTshdIixcOWy"
+    },
+    {
+      "path": "MyEngine",
+      "color": "ryzhirDmncg6OVnkmHf7k"
+    },
+    {
+      "path": "EditorTexto",
+      "color": "eEkrLjgIJiTshdIixcOWy"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "color": "ryzhirDmncg6OVnkmHf7k"
+    },
+    {
+      "path": "README.md",
+      "color": "ryzhirDmncg6OVnkmHf7k"
+    },
+    {
+      "path": "README_GAME.md",
+      "color": "zX_FzGmchOBLVMs5lrFrG"
+    },
+    {
+      "path": "EnumaElishBook/Chapters",
+      "color": "ryzhirDmncg6OVnkmHf7k"
+    },
+    {
+      "path": "EnumaElishBook/Diagrams",
+      "color": "eEkrLjgIJiTshdIixcOWy"
+    },
+    {
+      "path": "EnumaElishBook/Layouts",
+      "color": "UpctKBTQ-Vla1z1TvYbBY"
+    },
+    {
+      "path": "EnumaElishBook/NOTACION ESTANDAR ESCRITURA.md",
+      "color": "zX_FzGmchOBLVMs5lrFrG"
+    },
+    {
+      "path": "EnumaElishBook/Chapters/Capitulo 1, Leo.md",
+      "color": "ryzhirDmncg6OVnkmHf7k"
+    },
+    {
+      "path": "EnumaElishBook/Chapters/Los hermanos.md",
+      "color": "ryzhirDmncg6OVnkmHf7k"
+    }
+  ]
+}

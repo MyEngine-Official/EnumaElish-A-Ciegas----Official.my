@@ -1,7 +1,0 @@
-Hola, soy Leo, y tengo una interesante historia que contarte. Mi vida era una moneda de dos caras, la que veía el público, y la que conocía solo yo. Ante las cámaras, soy el empleado común que trabaja como programador Junior en una empresa, en mi habitación, era la tercera persona más buscada del planeta. 
-
-Todo el mundo era bueno en una cosa, podría ser en futbol, en juegos mentales, en carreras, en apuestas, o hasta en artes marciales. Pero todas tienen algo en común, avanzar hasta acabar con tu oponente. Hace 5 años en la secundaria me preguntaba en que quería especializarme, en que quería ganarle a los demás, en que quería tener el primer lugar, y como resultado de un largo interrogatorio elegí la programación.
-
-Con el tiempo tuve un nuevo propósito en mi vida, ser una eminencia indetectable. El actual presidente de Estados Unidos es un ser muy corrupto, ahora, imagina lo genial que sería hackear el pentágono y enviar un video vestida de negro con una capucha y decir algo como “Mi nombre es Shadow, nos ocultamos en la sombra, para cazar a los que en ella se amparan. Vamos más allá de la oscuridad, la corrupción nos brilla como un sol a mediodía” . Uff, eso si estaría bien épico.
-
-En mi camino como una eminencia oculta me adentré en las profundidades de la programación a bajo nivel. No solo me centré en como hacer lo que quiero, sino también en por qué funciona. Por qué si escribo esta línea de código, ocurre esto otro. 

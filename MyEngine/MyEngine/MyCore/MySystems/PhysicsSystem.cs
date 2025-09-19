@@ -9,7 +9,7 @@ using MyEngine.MyCore.MyEntities;
 
 namespace MyEngine.MyCore.MySystems
 {
-    public class PhysicsSystem
+    public class PhysicsSystem : ISystem
     {
         private WorldManager _world;
 
@@ -51,6 +51,7 @@ namespace MyEngine.MyCore.MySystems
             RigidbodyComponent rigidbody, ColliderComponent collider)
         {
             var otherEntities = _world.GetEntitiesWithComponents<TransformComponent, ColliderComponent>();
+            var tileMapColidersOtherEntities = _world.GetEntitiesWithComponents<TransformComponent, TilemapCollisionsComponent>();
 
             foreach (var other in otherEntities)
             {
@@ -73,6 +74,41 @@ namespace MyEngine.MyCore.MySystems
                     // ✅ RESOLVER COLISIÓN (mejorado para top-down)
                     ResolveCollision(entity, other, bounds1, bounds2, rigidbody, otherCollider);
                 }
+            }
+
+            foreach(var other in tileMapColidersOtherEntities)
+            {
+                var otherTransform = other.GetComponent<TransformComponent>();
+                var tilemapColliders = other.GetComponent<TilemapCollisionsComponent>();
+                var collisionRects = tilemapColliders.GetCollisionRects();
+                foreach (var rect in collisionRects)
+                {
+                    // Ajustar el rectángulo de colisión según la posición y escala del tilemap
+                    Rectangle adjustedRect = new Rectangle(
+                        (int)(otherTransform.Position.X + rect.X * otherTransform.Scale.X),
+                        (int)(otherTransform.Position.Y + rect.Y * otherTransform.Scale.Y),
+                        (int)(rect.Width * otherTransform.Scale.X),
+                        (int)(rect.Height * otherTransform.Scale.Y)
+                    );
+                    Rectangle bounds1 = GetBounds(transform, collider);
+                    if (bounds1.Intersects(adjustedRect))
+                    {
+                        // Crear un ColliderComponent temporal para el rectángulo del tilemap
+                        ColliderComponent tempCollider = new ColliderComponent(new Vector2(adjustedRect.Width, adjustedRect.Height))
+                        {
+                            Size = new Vector2(adjustedRect.Width, adjustedRect.Height),
+                            Offset = Vector2.Zero,
+                            IsTrigger = false,
+                            IsEnabled = true,
+                            Layer = CollisionLayer.All,
+                            CollisionMask = CollisionLayer.All // Collide with all layers
+                        };
+                        // ✅ RESOLVER COLISIÓN (mejorado para top-down)
+                        ResolveCollision(entity, other, bounds1, adjustedRect, rigidbody, tempCollider);
+                    }
+                }
+
+
             }
         }
 

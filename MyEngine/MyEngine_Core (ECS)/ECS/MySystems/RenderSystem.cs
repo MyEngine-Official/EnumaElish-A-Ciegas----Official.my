@@ -69,27 +69,27 @@ namespace MyEngine_Core.ECS.MySystems
             // Draw Tilemaps first (usually background)
             foreach (var entity in sortedEntities)
             {
-                if (entity.HasComponent<TilemapComponent>())
+                if (entity.HasComponent<TilemapComponent>() && entity.HasComponent<TransformComponent>())
                 {
                     var transform = entity.GetComponent<TransformComponent>();
                     var tilemap = entity.GetComponent<TilemapComponent>();
 
                     // Apply transform to tilemap
-                    var oldScale = tilemap.Scale;
+                    //var oldScale = tilemap.Scale;
                     tilemap.Scale = transform.Scale;
 
                     // Draw tilemap at transform position
                     // Note: You might want to modify TilemapComponent.Draw to accept position
                     tilemap.Draw(_spriteBatch);
 
-                    tilemap.Scale = oldScale;
+                    //tilemap.Scale = oldScale;
                 }
             }
 
             // Draw Sprites
             foreach (var entity in sortedEntities)
             {
-                if (entity.HasComponent<SpriteComponent>())
+                if (entity.HasComponent<SpriteComponent>() && entity.HasComponent<TransformComponent>())
                 {
                     var transform = entity.GetComponent<TransformComponent>();
                     var sprite = entity.GetComponent<SpriteComponent>();

@@ -10,7 +10,7 @@ using MyEngine.MyCore.MyComponents;
 
 namespace MyEngine.MyCore.MySystems
 {
-    public class ButtonSystem
+    public class ButtonSystem : ISystem
     {
         private WorldManager _world;
 

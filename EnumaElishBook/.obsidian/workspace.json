@@ -1,0 +1,243 @@
+{
+  "main": {
+    "id": "3e1aef93c08b6e36",
+    "type": "split",
+    "children": [
+      {
+        "id": "76e580ec6723798b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9521190379d5148f",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Diagrams/Diagrama.canvas",
+                "viewState": {
+                  "x": 210,
+                  "y": -589.2553525641026,
+                  "zoom": -0.6063926278605883
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Diagrama"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "64533a9f25453350",
+    "type": "split",
+    "children": [
+      {
+        "id": "c778a3aa6ba81c13",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9a3cd2baa5dabb98",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "18c613207063c101",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "8206f1b88ce4820e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e1f615838421304c",
+    "type": "split",
+    "children": [
+      {
+        "id": "01bef63e6a6d6327",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "84d292ebb8284ad6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "EnumaElishBook/Chapters/Los hermanos.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes de Los hermanos"
+            }
+          },
+          {
+            "id": "b310a681e9872079",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": true,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes"
+            }
+          },
+          {
+            "id": "3da08ac050840f05",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "64d53c03e6a9fac3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": true,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema"
+            }
+          }
+        ]
+      },
+      {
+        "id": "2f83837ded8955ac",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d9c4656c26dca765",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "calendar"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Crear nueva base": false,
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "obsidian-shellcommands:Shell commands: Custom variables": false
+    }
+  },
+  "active": "9521190379d5148f",
+  "lastOpenFiles": [
+    "Layouts/Premisa.md",
+    "Diagrams/Diagrama.canvas",
+    "Layouts/Protagonistas.md",
+    "Layouts/Detalles/Los Hermanos.md",
+    "Layouts/Trama.md",
+    "Layouts/Orden de las Sombras (Shadow Order).md",
+    "Chapters/Los hermanos.md",
+    "Chapters/Capitulo 1, Leo.md",
+    "NOTACION ESTANDAR ESCRITURA.md",
+    "README_GAME.md",
+    "MyEngine/MyEngine_Core (ECS)/docs/README_FIX.md.md",
+    "MyEngine/MyEngine_Core (ECS)/docs/myengine_ecs_analysis.md",
+    "MyEngine/MyEngine_Core (ECS)/docs/TUTORIAL_COMPLETO.md",
+    "MyEngine/MyEngine_Core (ECS)/docs/README.md",
+    "EnumaElishBook/Chapters/Los hermanos.md",
+    "MyEngine/MyEngineDemoGameImplementation/Content/bin/DesktopGL/Resources/Group1/atlas_buttons.xml",
+    "MyEngine/MyEngineDemoGameImplementation/Content/obj/DesktopGL/Resources/Group1/HojaBotones.mgcontent",
+    "MyEngine/MyEngineDemoGameImplementation/Content/obj/DesktopGL/Resources/Group1",
+    "MyEngine/MyEngineDemoGameImplementation/Content/obj/DesktopGL/Resources",
+    "MyEngine/MyEngineDemoGameImplementation/Content/bin/DesktopGL/Resources/Group1/HojaBotones.xnb",
+    "MyEngine/MyEngineDemoGameImplementation/Content/bin/DesktopGL/Resources/Group1",
+    "MyEngine/MyEngineDemoGameImplementation/Content/bin/DesktopGL/Resources",
+    "MyEngine/MyEngineDemoGameImplementation/bin/Debug/net8.0/Content/Resources/Group1/HojaBotones.xnb",
+    "MyEngine/MyEngineDemoGameImplementation/bin/Debug/net8.0/Content/Resources/Group1/atlas_buttons.xml",
+    "MyEngine/MyEngineDemoGameImplementation/bin/Debug/net8.0/Content/Resources/Group1",
+    "MyEngine/MyEngineDemoGameImplementation/Content/Resources/Group1/HojaBotones.png",
+    "MyEngine/MyEngineDemoGameImplementation/Icon.bmp",
+    "EnumaElishBook/Chapters/Capitulo 1, Leo.md",
+    "EnumaElishBook/Layouts/Premisa.md",
+    "EnumaElishBook/Layouts/Orden de las Sombras (Shadow Order).md",
+    "EnumaElishBook/NOTACION ESTANDAR ESCRITURA.md",
+    "Sin título.md",
+    "MyEngine/Docs/Como crear una ventana.md",
+    "README.md",
+    "CONTRIBUTING.md",
+    "scripts/README.md",
+    "Sin título.canvas",
+    "Libro Matematicas 3D para Videojuegos/Bienvenido.md",
+    "2025-09-04.md",
+    "EnumaElishBook/Diagrams/Diagrama.canvas",
+    "MyEngine/Docs/loading-rendering.png",
+    "EnumaElishBook/Sin título.canvas",
+    "GamePlatform/GameClient/EnumaElish.OpenGl/Content/utilidades/cursor/cursorOfficial.png",
+    "GamePlatform/GameClient/EnumaElish.OpenGl/Content/utilidades/cursor/cursor.png",
+    "GamePlatform/GameClient/EEGame.UI/EnumaElish.UI/Content/utilidades/buttons/HojaBotones.png",
+    "GamePlatform/GameClient/EEGame.UI/EnumaElish.UI/Content/utilidades/HojaBotones.png",
+    "GamePlatform/GameClient/EnumaElish.OpenGl/Content/utilidades/buttons/HojaBotones.png",
+    "GamePlatform/GameClient/Game.UI/EnumaElish.UI/Content/utilidades/buttons/HojaBotones.png",
+    "GamePlatform/GameClient/Game.UI/EnumaElish.Game.UI/Content/utilidades/buttons/HojaBotones.png",
+    "Sin título 1.canvas"
+  ]
+}

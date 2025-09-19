@@ -1,0 +1,129 @@
+{
+    "folders": [
+        {
+            "path": "Content",
+            "files": [
+                {
+                    "path": "Content.mgcb"
+                }
+            ]
+        },
+        {
+            "path": "Controllers",
+            "files": [
+                {
+                    "path": "AudioController.cs"
+                }
+            ]
+        },
+        {
+            "path": "MyCore",
+            "folders": [
+                {
+                    "path": "MyComponents",
+                    "files": [
+                        {
+                            "path": "AnimationComponent.cs"
+                        },
+                        {
+                            "path": "ButtonComponent.cs"
+                        },
+                        {
+                            "path": "ColliderComponent.cs"
+                        },
+                        {
+                            "path": "InputComponent.cs"
+                        },
+                        {
+                            "path": "LifeComponent.cs"
+                        },
+                        {
+                            "path": "RigibodyComponent.cs"
+                        },
+                        {
+                            "path": "SpriteComponent.cs"
+                        },
+                        {
+                            "path": "TilemapCollisionsComponent.cs"
+                        },
+                        {
+                            "path": "TilemapComponent.cs"
+                        },
+                        {
+                            "path": "TransformComponent.cs"
+                        }
+                    ]
+                },
+                {
+                    "path": "MyEntities",
+                    "files": [
+                        {
+                            "path": "MainEntity.cs"
+                        }
+                    ]
+                },
+                {
+                    "path": "MySystems",
+                    "files": [
+                        {
+                            "path": "AnimationSystem.cs"
+                        },
+                        {
+                            "path": "ButtonSystem.cs"
+                        },
+                        {
+                            "path": "InputSystem.cs"
+                        },
+                        {
+                            "path": "PhysicsSystem.cs"
+                        },
+                        {
+                            "path": "RenderSystem.cs"
+                        }
+                    ]
+                }
+            ],
+            "files": [
+                {
+                    "path": "WorldManager.cs"
+                }   
+            ]
+        },
+        {
+            "path": "MyGraphics",
+            "files": [
+                {
+                    "path": "Camera2D.cs"
+                },
+                {
+                    "path": "Animation.cs"
+                },
+                {
+                    "path": "TextureAtlas.cs"
+                },
+                {
+                    "path": "TextureRegion.cs"
+                },
+                {
+                    "path": "Tileset.cs"
+                }
+            ]
+        },
+        {
+            "path": "MyPhysics",
+            "files": [
+                {
+                    "path": "Tilemap.cs"
+                }
+            ]"
+        }
+    ],
+    "archives": [
+        {
+            "path": "MyProgram.cs"
+        },
+        {
+            "path": "code-workspace.json" //this file
+        }
+    ]
+}

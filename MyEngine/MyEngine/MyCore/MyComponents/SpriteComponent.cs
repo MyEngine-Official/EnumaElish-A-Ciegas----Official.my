@@ -7,6 +7,7 @@ namespace MyEngine.MyCore.MyComponents
 {
     public class SpriteComponent
     {
+        public bool visibility { get; set; } = true;
         public TextureRegion Region { get; set; }
         public Color Color { get; set; } = Color.White;
         public Vector2 Origin { get; set; } = Vector2.Zero;

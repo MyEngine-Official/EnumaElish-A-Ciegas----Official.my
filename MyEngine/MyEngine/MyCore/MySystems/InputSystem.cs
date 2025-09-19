@@ -10,7 +10,7 @@ using MyEngine.MyCore.MyEntities;
 
 namespace MyEngine.MyCore.MySystems
 {
-    public class InputSystem
+    public class InputSystem: ISystem
     {
         private WorldManager _world;
         private KeyboardState _previousKeyboardState;
@@ -69,82 +69,69 @@ namespace MyEngine.MyCore.MySystems
             if (input.UseKeyboard)
             {
                 Vector2 vel = entity.GetComponent<RigidbodyComponent>().Velocity;
-                
+
                 Vector2 movement = Vector2.Zero;
 
-                if (IsKeyDown(input.MoveUpKey))
+                if (WasKeyJustPressed(input.KeyBindings[InputAction.MoveUp]))
                     movement.Y -= vel.Y;
-                if (IsKeyDown(input.MoveDownKey))
+                if (WasKeyJustPressed(input.KeyBindings[InputAction.MoveDown]))
                     movement.Y += vel.Y;
-                if (IsKeyDown(input.MoveLeftKey))
+                if (WasKeyJustPressed(input.KeyBindings[InputAction.MoveLeft]))
                     movement.X -= vel.X;
-                if (IsKeyDown(input.MoveRightKey))
+                if (WasKeyJustPressed(input.KeyBindings[InputAction.MoveRight]))
                     movement.X += vel.X;
 
                 if (movement != Vector2.Zero)
                 {
-                    movement.Normalize();
-                    ApplyMovement(entity, movement, vel, deltaTime);
-                }
+                    entity.GetComponent<RigidbodyComponent>().SetVelocity(movement);
 
-                // Check action keys
-                if (WasKeyJustPressed(input.ActionKey))
-                {
-                    input.OnAction?.Invoke(entity);
-                }
-
-                if (WasKeyJustPressed(input.JumpKey))
-                {
-                    input.OnJump?.Invoke(entity);
-                }
-            }
-
-            // Process gamepad input
-            if (input.UseGamepad && input.GamepadIndex < 4)
-            {
-                var gamePadState = _currentGamePadStates[input.GamepadIndex];
-
-                if (gamePadState.IsConnected)
-                {
-                    Vector2 leftStick = gamePadState.ThumbSticks.Left;
-                    leftStick.Y *= -1; // Invert Y axis
-
-                    if (leftStick.LengthSquared() > 0.1f * 0.1f) // Dead zone
+                    // Check action keys
+                    if (WasKeyJustPressed(input.KeyBindings[InputAction.Action]))
                     {
-                        ApplyMovement(entity, leftStick, input.MoveSpeed, deltaTime);
+                        input.InvocarAction(entity);
                     }
 
-                    if (WasButtonJustPressed(input.GamepadIndex, Buttons.A))
+                    if (WasKeyJustPressed(input.KeyBindings[InputAction.Jump]))
                     {
-                        input.OnJump?.Invoke(entity);
-                    }
 
-                    if (WasButtonJustPressed(input.GamepadIndex, Buttons.X))
-                    {
-                        input.OnAction?.Invoke(entity);
-                    }
-                }
-            }
-
-            // Process mouse input
-            if (input.UseMouse && entity.HasComponent<TransformComponent>())
-            {
-                var transform = entity.GetComponent<TransformComponent>();
-                input.MousePosition = new Vector2(_currentMouseState.X, _currentMouseState.Y);
-
-                if (input.FollowMouse)
-                {
-                    Vector2 direction = input.MousePosition - transform.Position;
-                    if (direction.LengthSquared() > 1f)
-                    {
-                        direction.Normalize();
-                        ApplyMovement(entity, direction, input.MoveSpeed, deltaTime);
+                        input.InvocarJump(entity);
                     }
                 }
 
-                if (WasMouseButtonJustPressed(MouseButton.Left))
+                // Process gamepad input
+                if (input.UseGamepad && input.GamepadIndex < 4)
                 {
-                    input.OnMouseClick?.Invoke(entity, input.MousePosition);
+                    var gamePadState = _currentGamePadStates[input.GamepadIndex];
+
+                    if (gamePadState.IsConnected)
+                    {
+                        Vector2 leftStick = gamePadState.ThumbSticks.Left;
+                        leftStick.Y *= -1; // Invert Y axis
+
+                        if (leftStick.LengthSquared() > 0.1f * 0.1f) // Dead zone
+                        {
+
+
+                            if (WasButtonJustPressed(input.GamepadIndex, input.GamepadBindings[InputAction.MoveUp]))
+                            {
+                                movement.Y -= vel.Y;
+                            }
+
+                            if (WasButtonJustPressed(input.GamepadIndex, input.GamepadBindings[InputAction.MoveUp]))
+                            {
+                                movement.Y += vel.Y;
+                            }
+                            if (WasButtonJustPressed(input.GamepadIndex, input.GamepadBindings[InputAction.MoveUp]))
+                            {
+                                movement.X -= vel.X;
+                            }
+
+                            if (WasButtonJustPressed(input.GamepadIndex, input.GamepadBindings[InputAction.MoveUp]))
+                            {
+                                movement.X += vel.X;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -180,4 +167,7 @@ namespace MyEngine.MyCore.MySystems
             Middle
         }
     }
+
+   
+
 }

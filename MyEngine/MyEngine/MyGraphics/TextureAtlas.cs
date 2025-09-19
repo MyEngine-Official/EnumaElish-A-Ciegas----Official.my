@@ -253,8 +253,6 @@ namespace MyEngine.MyGraphics
 
             return animacionComponent;
         }
-
-
-
+=
     }
 }
