@@ -12,6 +12,13 @@ namespace MyEngine.MyCore.MyComponents
         public Vector2 Position { get; set; }
         public float Rotation { get; set; }
         public Vector2 Scale { get; set; } = Vector2.One;
+
+        public TransformComponent(Vector2 position, float rotation, Vector2 scale)
+        {
+            Position = position;
+            Rotation = rotation;
+            Scale = scale;
+        }
         public void Y(float y)
         {
             Position = new Vector2(Position.X, y);
@@ -49,12 +56,12 @@ namespace MyEngine.MyCore.MyComponents
 
         public void MoverArriba(float movement)
         {
-            X(Position.Y - movement);
+            Y(Position.Y - movement);
         }
 
         public void MoverAbajo(float movement)
         {
-            X(Position.Y + movement);
+            Y(Position.Y + movement);
         }
     }
 }

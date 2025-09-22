@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<GameProject name="" path="">
+	<ContentPath>Content/Utilities/</ContentPath>
+	<GameEntities>
+		<entity id="" name="">
+			<Components>
+				<SpriteComponent active="true" spriteName="" path="" />
+				<AnimationComponent active="true" animationName="" path="" />
+				<ButtonComponent active="true" keyboardKey="" gamePadButton="" x="0" y="0" width="0" heigth="0"/>
+			</Components>
+		</entity>
+		<entity id="" name="">
+			
+		</entity>
+	</GameEntities>
+</GameProject>

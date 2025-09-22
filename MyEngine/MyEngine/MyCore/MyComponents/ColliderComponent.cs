@@ -85,7 +85,18 @@ namespace MyEngine.MyCore.MyComponents
             CollisionMask = CollisionLayer.All;
             IsEnabled = true;
         }
-        
+
+        public ColliderComponent(Vector2 size, Vector2 offset, bool isTrigger, string tag, CollisionLayer layer, CollisionLayer cmask, bool isEnabled)
+        {
+            Size = size;
+            Offset = Vector2.Zero;
+            IsTrigger = isTrigger;
+            Tag = tag;
+            Layer = layer;
+            CollisionMask = cmask;
+            IsEnabled = isEnabled;
+        }
+
         /// <summary>
         /// Gets the bounding rectangle for this collider at the given position
         /// </summary>

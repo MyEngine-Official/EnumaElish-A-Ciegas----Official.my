@@ -16,6 +16,7 @@ namespace MyEngine.MyCore.MyComponents
         /// Is input processing enabled for this entity
         /// </summary>
         public bool IsEnabled { get; set; } = true;
+        
 
         /// <summary>
         /// Should keyboard input be processed
@@ -31,10 +32,18 @@ namespace MyEngine.MyCore.MyComponents
         /// Should mouse input be processed
         /// </summary>
         public bool UseMouse { get; set; } = false;
-
         public int GamepadIndex { get; set; } = 0; // 0-3 for PlayerIndex
         public event Action<MainEntity> OnAction;
         public event Action<MainEntity> OnJump;
+
+        public InputComponent(bool useMouse, bool useGamePad, bool useKeyboard, bool isEnabled, int gamepadIndex)
+        {
+            UseGamepad = useGamePad;
+            UseKeyboard = useKeyboard;
+            UseMouse = useMouse;
+            IsEnabled = isEnabled;
+            GamepadIndex = gamepadIndex;
+        }
         public Dictionary<InputAction, Keys> KeyBindings { get; private set; } = new()
         {
             { InputAction.MoveUp, Keys.None },

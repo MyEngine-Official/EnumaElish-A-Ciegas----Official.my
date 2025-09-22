@@ -5,21 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using MyEngine.MyCore.Events;
 using MyEngine.MyCore.MyComponents;
 using MyEngine.MyCore.MyEntities;
 
 namespace MyEngine.MyCore.MySystems
 {
-    public class InputSystem: ISystem
+    public class InputSystem: ISystem, IEventSubscriber
     {
         private WorldManager _world;
+        private EventBus _eventBus;
+
         private KeyboardState _previousKeyboardState;
         private KeyboardState _currentKeyboardState;
         private MouseState _previousMouseState;
         private MouseState _currentMouseState;
         private GamePadState[] _previousGamePadStates;
         private GamePadState[] _currentGamePadStates;
-
+        private bool _inputEnabled = true;
         public InputSystem()
         {
             _previousGamePadStates = new GamePadState[4];
@@ -29,6 +32,14 @@ namespace MyEngine.MyCore.MySystems
         public void Initialize(WorldManager world)
         {
             _world = world;
+            _eventBus = world.Events;
+        }
+
+        public void SubscribeToEvents(EventBus eventBus)
+        {
+            // Input System puede reaccionar a eventos del juego
+            eventBus.Subscribe<GamePausedEvent>(OnGamePaused);
+            eventBus.Subscribe<GameResumedEvent>(OnGameResumed);
         }
 
         /// <summary>
@@ -36,6 +47,8 @@ namespace MyEngine.MyCore.MySystems
         /// </summary>
         public void Update(GameTime gameTime)
         {
+            if (!_inputEnabled) return;
+
             // Update states
             _previousKeyboardState = _currentKeyboardState;
             _currentKeyboardState = Keyboard.GetState();
@@ -57,6 +70,8 @@ namespace MyEngine.MyCore.MySystems
                 var input = entity.GetComponent<InputComponent>();
                 ProcessEntityInput(entity, input, gameTime);
             }
+
+            PublishGlobalInputEvents();
         }
 
 
@@ -64,43 +79,46 @@ namespace MyEngine.MyCore.MySystems
         {
             if (!input.IsEnabled) return;
 
-            float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            // Process keyboard input
-            if (input.UseKeyboard)
-            {
+                float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
                 Vector2 vel = entity.GetComponent<RigidbodyComponent>().Velocity;
-
-                Vector2 movement = Vector2.Zero;
-
-                if (WasKeyJustPressed(input.KeyBindings[InputAction.MoveUp]))
-                    movement.Y -= vel.Y;
-                if (WasKeyJustPressed(input.KeyBindings[InputAction.MoveDown]))
-                    movement.Y += vel.Y;
-                if (WasKeyJustPressed(input.KeyBindings[InputAction.MoveLeft]))
-                    movement.X -= vel.X;
-                if (WasKeyJustPressed(input.KeyBindings[InputAction.MoveRight]))
-                    movement.X += vel.X;
-
-                if (movement != Vector2.Zero)
+            Vector2 movement = Vector2.Zero;
+                    // Process keyboard input
+                if (input.UseKeyboard)
                 {
-                    entity.GetComponent<RigidbodyComponent>().SetVelocity(movement);
+                    movement = Vector2.Zero;
 
-                    // Check action keys
-                    if (WasKeyJustPressed(input.KeyBindings[InputAction.Action]))
+                    if (IsKeyDown(input.KeyBindings[InputAction.MoveUp]))
+                        movement.Y -= vel.Y;
+                    if (IsKeyDown(input.KeyBindings[InputAction.MoveDown]))
+                        movement.Y += vel.Y;
+                    if (IsKeyDown(input.KeyBindings[InputAction.MoveLeft]))
+                        movement.X -= vel.X;
+                    if (IsKeyDown(input.KeyBindings[InputAction.MoveRight]))
+                        movement.X += vel.X;
+
+                    if (movement != Vector2.Zero)
                     {
-                        input.InvocarAction(entity);
-                    }
+                        entity.GetComponent<RigidbodyComponent>().SetVelocity(movement);
 
-                    if (WasKeyJustPressed(input.KeyBindings[InputAction.Jump]))
-                    {
+                        // Check action keys
+                        if (IsKeyDown(input.KeyBindings[InputAction.Action]))
+                        {
+                            input.InvocarAction(entity);
+                        }
 
-                        input.InvocarJump(entity);
+                        if (IsKeyDown(input.KeyBindings[InputAction.Jump]))
+                        {
+
+                            input.InvocarJump(entity);
+                        }
                     }
                 }
 
-                // Process gamepad input
-                if (input.UseGamepad && input.GamepadIndex < 4)
+            // Process gamepad input
+            if (input.UseGamepad && input.GamepadIndex < 4)
                 {
+                    movement = Vector2.Zero;
+
                     var gamePadState = _currentGamePadStates[input.GamepadIndex];
 
                     if (gamePadState.IsConnected)
@@ -112,28 +130,37 @@ namespace MyEngine.MyCore.MySystems
                         {
 
 
-                            if (WasButtonJustPressed(input.GamepadIndex, input.GamepadBindings[InputAction.MoveUp]))
+                            if (IsButtonDown(input.GamepadIndex, input.GamepadBindings[InputAction.MoveUp]))
                             {
                                 movement.Y -= vel.Y;
                             }
 
-                            if (WasButtonJustPressed(input.GamepadIndex, input.GamepadBindings[InputAction.MoveUp]))
+                            if (IsButtonDown(input.GamepadIndex, input.GamepadBindings[InputAction.MoveDown]))
                             {
                                 movement.Y += vel.Y;
                             }
-                            if (WasButtonJustPressed(input.GamepadIndex, input.GamepadBindings[InputAction.MoveUp]))
+                            if (IsButtonDown(input.GamepadIndex, input.GamepadBindings[InputAction.MoveLeft]))
                             {
                                 movement.X -= vel.X;
                             }
 
-                            if (WasButtonJustPressed(input.GamepadIndex, input.GamepadBindings[InputAction.MoveUp]))
+                            if (IsButtonDown(input.GamepadIndex, input.GamepadBindings[InputAction.MoveRight]))
                             {
                                 movement.X += vel.X;
                             }
                         }
                     }
                 }
+
+            if (movement != Vector2.Zero)
+            {
+                _eventBus.Publish<EntityDirectionEvent>(new EntityDirectionEvent
+                {
+                    EntityId = entity.Id,
+                    Direction = movement,
+                });
             }
+                   
         }
 
         // Input query methods
@@ -146,6 +173,26 @@ namespace MyEngine.MyCore.MySystems
         public bool WasButtonJustPressed(int playerIndex, Buttons button) =>
             _currentGamePadStates[playerIndex].IsButtonDown(button) &&
             !_previousGamePadStates[playerIndex].IsButtonDown(button);
+
+        private void PublishGlobalInputEvents()
+        {
+            // Eventos de pausa
+            if (WasKeyJustPressed(Keys.Escape))
+            {
+                _eventBus.Publish(new GamePausedEvent { PauseReason = "User pressed Escape" });
+            }
+
+            // Eventos de UI
+            if (WasKeyJustPressed(Keys.I))
+            {
+                _eventBus.Publish(new UIWindowOpenedEvent { WindowName = "Inventory" });
+            }
+
+            if (WasKeyJustPressed(Keys.M))
+            {
+                _eventBus.Publish(new UIWindowOpenedEvent { WindowName = "Map" });
+            }
+        }
 
         public bool WasMouseButtonJustPressed(MouseButton button)
         {
@@ -160,6 +207,17 @@ namespace MyEngine.MyCore.MySystems
                 _ => false
             };
         }
+
+        private void OnGamePaused(GamePausedEvent e)
+        {
+            _inputEnabled = false; // Pausar input de gameplay, permitir solo input de UI
+        }
+
+        private void OnGameResumed(GameResumedEvent e)
+        {
+            _inputEnabled = true;
+        }
+
         public enum MouseButton
         {
             Left,

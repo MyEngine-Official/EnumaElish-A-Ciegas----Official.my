@@ -4,20 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using MyEngine.MyCore.Events;
 using MyEngine.MyCore.MyComponents;
 using MyEngine.MyCore.MyEntities;
 
 namespace MyEngine.MyCore.MySystems
 {
-    public class PhysicsSystem : ISystem
+    public class PhysicsSystem : ISystem, IEventSubscriber
     {
         private WorldManager _world;
+        private EventBus _eventBus;
 
         public void Initialize(WorldManager world)
         {
             _world = world;
+            _eventBus = world.Events;
         }
 
+        public void SubscribeToEvents(EventBus eventBus)
+        {
+            // Suscribirse a eventos que afectan la física
+            eventBus.Subscribe<PlayerDiedEvent>(OnPlayerDied);
+            eventBus.Subscribe<ItemCollectedEvent>(OnItemCollected);
+        }
         public void Update(GameTime gameTime)
         {
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -29,11 +38,22 @@ namespace MyEngine.MyCore.MySystems
 
                 var transform = entity.GetComponent<TransformComponent>();
                 var rigidbody = entity.GetComponent<RigidbodyComponent>();
+                Vector2 oldPosition = transform.Position;
 
                 // Update position based on velocity
                 transform.Position += rigidbody.Velocity * deltaTime;
 
 
+                float distanceMoved = Vector2.Distance(oldPosition, transform.Position);
+                if (distanceMoved > 1.0f) // Threshold para evitar spam
+                {
+                    _eventBus.QueueEvent(new EntityMovedEvent
+                    {
+                        EntityId = entity.Id,
+                        OldPosition = oldPosition,
+                        NewPosition = transform.Position
+                    });
+                }
                 // Check for collision components if needed
                 if (entity.HasComponent<ColliderComponent>())
                 {
@@ -71,8 +91,35 @@ namespace MyEngine.MyCore.MySystems
 
                 if (bounds1.Intersects(bounds2))
                 {
-                    // ✅ RESOLVER COLISIÓN (mejorado para top-down)
-                    ResolveCollision(entity, other, bounds1, bounds2, rigidbody, otherCollider);
+                    Vector2 collisionPoint = new Vector2(
+                    (bounds1.Center.X + bounds2.Center.X) / 2,
+                    (bounds1.Center.Y + bounds2.Center.Y) / 2
+                );
+                    // ✨ NUEVO: Publicar evento según tipo de colisión
+                    if (collider.IsTrigger || otherCollider.IsTrigger)
+                    {
+                        _eventBus.Publish(new TriggerEnterEvent
+                        {
+                            TriggerId = collider.IsTrigger ? entity.Id : other.Id,
+                            EntityId = collider.IsTrigger ? other.Id : entity.Id,
+                            TriggerTag = collider.IsTrigger ? collider.Tag : otherCollider.Tag,
+                            EntityTag = collider.IsTrigger ? otherCollider.Tag : collider.Tag
+                        });
+                    }
+                    else
+                    {
+                        _eventBus.Publish(new CollisionEnterEvent
+                        {
+                            Entity1Id = entity.Id,
+                            Entity2Id = other.Id,
+                            CollisionPoint = collisionPoint,
+                            Entity1Tag = collider.Tag,
+                            Entity2Tag = otherCollider.Tag,
+                        });
+
+                        // ✅ RESOLVER COLISIÓN (mejorado para top-down)
+                        ResolveCollision(entity, other, bounds1, bounds2, rigidbody, otherCollider);
+                    }
                 }
             }
 
@@ -227,5 +274,31 @@ namespace MyEngine.MyCore.MySystems
                 }
             }
         }
+
+        private void OnPlayerDied(PlayerDiedEvent e)
+        {
+            // Detener física del jugador muerto
+            var deadEntity = _world.GetAllEntities()
+                .FirstOrDefault(ent => ent.Id == e.PlayerId);
+
+            if (deadEntity?.HasComponent<RigidbodyComponent>() == true)
+            {
+                deadEntity.GetComponent<RigidbodyComponent>().Velocity = Vector2.Zero;
+            }
+        }
+
+        private void OnItemCollected(ItemCollectedEvent e)
+        {
+            // El item ya no debe colisionar
+            var itemEntity = _world.GetAllEntities()
+                .FirstOrDefault(ent => ent.Id == e.ItemEntityId);
+
+            if (itemEntity?.HasComponent<ColliderComponent>() == true)
+            {
+                itemEntity.GetComponent<ColliderComponent>().IsEnabled = false;
+            }
+        }
+
+
     }
 }

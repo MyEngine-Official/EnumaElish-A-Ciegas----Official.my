@@ -81,18 +81,12 @@ namespace MyEngine
             _inputSystem = new InputSystem();
             _buttonSystem = new ButtonSystem();
 
-            // Initialize systems with world
+            // Register systems with world (Initialize is called automatically)
             _world.RegisterSystem<RenderSystem>(_renderSystem);
             _world.RegisterSystem<AnimationSystem>(_animationSystem);
             _world.RegisterSystem<PhysicsSystem>(_physicsSystem);
             _world.RegisterSystem<InputSystem>(_inputSystem);
             _world.RegisterSystem<ButtonSystem>(_buttonSystem);
-
-            _renderSystem.Initialize(_world);
-            _animationSystem.Initialize(_world);
-            _physicsSystem.Initialize(_world);
-            _inputSystem.Initialize(_world);
-            _buttonSystem.Initialize(_world);
 
             _sceneManager = new SceneManager(GraphicsDevice, _spriteBatch, Content, _audioController);
 
@@ -105,11 +99,12 @@ namespace MyEngine
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            // Update services
             _audioController.Update();
-            _inputSystem.Update(gameTime);
-            _buttonSystem.Update(gameTime);
-            _physicsSystem.Update(gameTime);
-            _animationSystem.Update(gameTime);
+            
+            // Update all systems through WorldManager (recommended approach)
+            _world.UpdateSystems(gameTime);
+
             // TODO: Add your update logic here
 
             base.Update(gameTime);
