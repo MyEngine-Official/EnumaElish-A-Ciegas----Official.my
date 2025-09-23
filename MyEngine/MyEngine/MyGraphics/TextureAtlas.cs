@@ -249,10 +249,10 @@ namespace MyEngine.MyGraphics
         {
             Animation animation = GetAnimation(animationName);
             var animacionComponent = new AnimationComponent();
-            animacionComponent.AddAnimation(animationName, animation);
+            animacionComponent.AddAnimation(AnimationAction.normal, animation);
 
             return animacionComponent;
         }
-=
+
     }
 }

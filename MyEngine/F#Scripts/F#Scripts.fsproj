@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>F_Scripts</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Scripts\PlayerScript.fs" />
+    <Compile Include="Library.fs" />
+  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.*">
+			<PrivateAssets>All</PrivateAssets>
+		</PackageReference>
+	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyEngine\MyEngine.csproj" />
+    <ProjectReference Include="..\TestingCrossPlatformGame\TestingCrossPlatformGame.Core\TestingCrossPlatformGame.Core.csproj" />
+  </ItemGroup>
+
+</Project>

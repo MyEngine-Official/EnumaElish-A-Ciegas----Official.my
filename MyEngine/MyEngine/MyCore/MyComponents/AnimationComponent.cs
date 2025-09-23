@@ -79,6 +79,7 @@ namespace MyEngine.MyCore.MyComponents
 
     public enum AnimationAction
     {
+        normal,
         JumpRigth,
         JumpUp,
         RunRight,
