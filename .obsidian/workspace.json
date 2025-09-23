@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GamePlatform/monogame_internal_readme.md",
+                "file": "EnumaElishBook/NOTACION ESTANDAR ESCRITURA.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "monogame_internal_readme"
+              "title": "NOTACION ESTANDAR ESCRITURA"
             }
           }
         ]
@@ -186,6 +186,7 @@
   },
   "active": "0dbb9ff2e882f929",
   "lastOpenFiles": [
+    "GamePlatform/monogame_internal_readme.md",
     "MyEngine/MyEngine_Core (ECS)/docs/README_FIX.md.md",
     "README_GAME.md",
     "MyEngine/MyEngine_Core (ECS)/docs/myengine_ecs_analysis.md",
@@ -225,7 +226,6 @@
     "EnumaElishBook/Layouts/Detalles/Leo.md",
     "EnumaElishBook/Layouts/Detalles/Los Hermanos.md",
     "EnumaElishBook/Layouts/Detalles/Organizacion.md",
-    "EnumaElishBook/Layouts/Trama.md",
     "MyEngine/Docs/loading-rendering.png",
     "EnumaElishBook/Sin título.canvas",
     "GamePlatform/GameClient/EnumaElish.OpenGl/Content/utilidades/cursor/cursorOfficial.png",
