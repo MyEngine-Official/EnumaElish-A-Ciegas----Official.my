@@ -21,9 +21,9 @@ namespace MyEngine.MyCore
             return animComp;
         }
 
-        public SpriteComponent CrearSprite(string route, string spriteName)
+        public SpriteComponent CrearSprite(string TextureAtlasRoute, string spriteName)
         {
-            _textureAtlas = TextureAtlas.FromFile(_contentManager, route);
+            _textureAtlas = TextureAtlas.FromFile(_contentManager, TextureAtlasRoute);
             SpriteComponent spriteComp = _textureAtlas.CreateSprite(spriteName);
             return spriteComp;
         }
