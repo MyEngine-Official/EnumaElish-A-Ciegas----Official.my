@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "EnumaElishBook/NOTACION ESTANDAR ESCRITURA.md",
+                "file": "MyEngine/MyEngine/SCENE_INTEGRATION_README.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NOTACION ESTANDAR ESCRITURA"
+              "title": "SCENE_INTEGRATION_README"
             }
           }
         ]
@@ -186,6 +186,7 @@
   },
   "active": "0dbb9ff2e882f929",
   "lastOpenFiles": [
+    "EnumaElishBook/NOTACION ESTANDAR ESCRITURA.md",
     "GamePlatform/monogame_internal_readme.md",
     "MyEngine/MyEngine_Core (ECS)/docs/README_FIX.md.md",
     "README_GAME.md",
@@ -208,7 +209,6 @@
     "EnumaElishBook/Chapters/Capitulo 1, Leo.md",
     "EnumaElishBook/Layouts/Premisa.md",
     "EnumaElishBook/Layouts/Orden de las Sombras (Shadow Order).md",
-    "EnumaElishBook/NOTACION ESTANDAR ESCRITURA.md",
     "Sin título.md",
     "MyEngine/Docs/Como crear una ventana.md",
     "README.md",

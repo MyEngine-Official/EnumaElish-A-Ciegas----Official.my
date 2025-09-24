@@ -1,5 +1,0 @@
-C:\Users\Usuario\Desktop\EE\EnumaElish-A-Ciegas----Official.my\MyEngine\MyEngine\x64\Debug\Ijwhost.dll
-C:\Users\Usuario\Desktop\EE\EnumaElish-A-Ciegas----Official.my\MyEngine\MyEngine\x64\Debug\NativeAPI.deps.json
-C:\Users\Usuario\Desktop\EE\EnumaElish-A-Ciegas----Official.my\MyEngine\MyEngine\x64\Debug\NativeAPI.runtimeconfig.json
-M:\MyEnumaElish\EnumaElish_A CIEGAS\MyEngine\NativeAPI\x64\Debug\NativeAPI.sourcelink.json
-M:\MyEnumaElish\EnumaElish_A CIEGAS\MyEngine\NativeAPI\x64\Debug\NativeAPI.genruntimeconfig.cache

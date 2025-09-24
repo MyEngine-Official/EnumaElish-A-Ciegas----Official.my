@@ -14,16 +14,6 @@ namespace MyEngine
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        // ECS Core
-        private WorldManager _world;
-
-        // Systems
-        private RenderSystem _renderSystem;
-        private AnimationSystem _animationSystem;
-        private PhysicsSystem _physicsSystem;
-        private InputSystem _inputSystem;
-        private ButtonSystem _buttonSystem;
-
         // Services
         private AudioController _audioController;
         private SceneManager _sceneManager;
@@ -33,12 +23,17 @@ namespace MyEngine
         private readonly int _width;
         private readonly int _height;
         private readonly bool _fullScreen;
-        public MyProgram(string title = "MyEngine Game", int width = 1280, int height = 720, bool fullScreen = false)
+        private readonly bool _allowUserResizing;
+        private Scene _initialScene;
+        public MyProgram(string title = "MyEngine Game", int width = 1280, int height = 720, 
+            bool fullScreen = false, bool allowUserResizing = false, Scene initialScene = null)
         {
             _title = title;
             _width = width;
             _height = height;
             _fullScreen = fullScreen;
+            _allowUserResizing = allowUserResizing;
+            _initialScene = initialScene;
 
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -50,8 +45,14 @@ namespace MyEngine
             _graphics.IsFullScreen = _fullScreen;
             _graphics.SynchronizeWithVerticalRetrace = true;
 
-            // Set window title
+            // Set window properties
             Window.Title = _title;
+            Window.AllowUserResizing = _allowUserResizing;
+            
+            if (_allowUserResizing)
+            {
+                Window.ClientSizeChanged += OnWindowResize;
+            }
 
             // Target 60 FPS
             IsFixedTimeStep = true;
@@ -60,9 +61,6 @@ namespace MyEngine
 
         protected override void Initialize()
         {
-            // Create the ECS world
-            _world = new WorldManager();
-
             // Initialize services
             _audioController = new AudioController();
 
@@ -74,50 +72,75 @@ namespace MyEngine
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // Create and register systems
-            _renderSystem = new RenderSystem(GraphicsDevice, _spriteBatch);
-            _animationSystem = new AnimationSystem();
-            _physicsSystem = new PhysicsSystem();
-            _inputSystem = new InputSystem();
-            _buttonSystem = new ButtonSystem();
-
-            // Register systems with world (Initialize is called automatically)
-            _world.RegisterSystem<RenderSystem>(_renderSystem);
-            _world.RegisterSystem<AnimationSystem>(_animationSystem);
-            _world.RegisterSystem<PhysicsSystem>(_physicsSystem);
-            _world.RegisterSystem<InputSystem>(_inputSystem);
-            _world.RegisterSystem<ButtonSystem>(_buttonSystem);
-
+            // Create scene manager
             _sceneManager = new SceneManager(GraphicsDevice, _spriteBatch, Content, _audioController);
 
+            // Load initial scene
+            if (_initialScene != null)
+            {
+                // Use provided initial scene
+                _sceneManager.SwitchToScene(_initialScene);
+            }
+            else
+            {
+                // Create default example scene
+                var defaultScene = new ExampleMainMenuScene();
+                _sceneManager.SwitchToScene(defaultScene);
+            }
+
             base.LoadContent();
-            // TODO: use this.Content to load your game content here
         }
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            // Global exit condition (can be overridden in scenes)
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed && 
+                Keyboard.GetState().IsKeyDown(Keys.LeftShift))
                 Exit();
 
             // Update services
             _audioController.Update();
             
-            // Update all systems through WorldManager (recommended approach)
-            _world.UpdateSystems(gameTime);
-
-            // TODO: Add your update logic here
+            // Update scene manager (handles current scene update)
+            _sceneManager.Update(gameTime);
 
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            // TODO: Add your drawing code here
-            _renderSystem.Draw(gameTime);
+            // Scene manager handles clearing and drawing
+            _sceneManager.Draw(gameTime);
 
             base.Draw(gameTime);
         }
+
+        /// <summary>
+        /// Handles window resize events
+        /// </summary>
+        private void OnWindowResize(object sender, EventArgs e)
+        {
+            if (_graphics.GraphicsDevice.Viewport.Width > 0 && _graphics.GraphicsDevice.Viewport.Height > 0)
+            {
+                _sceneManager?.OnWindowResize(
+                    _graphics.GraphicsDevice.Viewport.Width, 
+                    _graphics.GraphicsDevice.Viewport.Height);
+            }
+        }
+
+        /// <summary>
+        /// Clean up resources
+        /// </summary>
+        protected override void UnloadContent()
+        {
+            _sceneManager?.Dispose();
+            _audioController?.Dispose();
+            base.UnloadContent();
+        }
+
+        /// <summary>
+        /// Gets the scene manager for external access (e.g., for scene switching)
+        /// </summary>
+        public SceneManager SceneManager => _sceneManager;
     }
 }
