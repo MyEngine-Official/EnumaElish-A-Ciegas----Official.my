@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyEngine.MyCore.MyComponents;
+using System;
 using System.Collections.Generic;
 
 namespace MyEngineAPI.Resources.Helpers
@@ -550,6 +551,51 @@ namespace MyEngineAPI.Resources.Helpers
             public static bool Delete(XMLGameManager manager, int entityId)
             {
                 return manager.RemoveComponent(entityId, "TilemapCollisionsComponent");
+            }
+        }
+
+        #endregion
+
+        #region ScriptComponent Helper
+
+        public static class ScriptComponentHelper
+        {
+            public static void Create(XMLGameManager manager, int entityId, string path, ScriptLanguaje scriptLanguaje)
+            {
+                var attributes = new Dictionary<string, string>
+                {
+                    {"path", path},
+                    { "languaje", scriptLanguaje.ToString()}
+                };
+
+                manager.AddComponent(entityId, "ScriptComponent", attributes);
+            }
+
+            public static ComponentInfo Read(XMLGameManager manager, int entityId)
+            {
+                var components = manager.ListEntityComponents(entityId);
+                return components.Find(c => c.Type == "ScriptComponent");
+            }
+
+            public static bool Update(XMLGameManager manager, int entityId, ScriptLanguaje scriptLanguaje, string path = null)
+            {
+                var attributes = new Dictionary<string, string>();
+
+                if (!string.IsNullOrEmpty(path))
+                    attributes["path"] = path;
+
+                if(!string.IsNullOrEmpty(scriptLanguaje.ToString()))
+                    attributes["languaje"] = scriptLanguaje.ToString();
+
+                if (attributes.Count > 0)
+                    return manager.EditComponent(entityId, "ScriptComponent", attributes);
+
+                return false;
+            }
+
+            public static bool Delete(XMLGameManager manager, int entityId)
+            {
+                return manager.RemoveComponent(entityId, "ScriptComponent");
             }
         }
 

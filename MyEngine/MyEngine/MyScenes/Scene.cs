@@ -132,11 +132,10 @@ namespace MyEngine.MyScenes
         /// </summary>
         public virtual void Update(GameTime gameTime)
         {
-            // Update all systems through WorldManager
-            World.UpdateSystems(gameTime);
-            
             // Call scene-specific update
             OnUpdate(gameTime);
+            // Update all systems through WorldManager
+            World.UpdateSystems(gameTime);
         }
 
         /// <summary>

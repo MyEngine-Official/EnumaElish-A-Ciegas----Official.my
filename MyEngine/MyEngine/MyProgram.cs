@@ -5,14 +5,15 @@ using Microsoft.Xna.Framework.Input;
 using MyEngine.Controllers;
 using MyEngine.MyCore;
 using MyEngine.MyCore.MyComponents;
+using MyEngine.MyCore.MyEntities;
 using MyEngine.MyCore.MySystems;
 using MyEngine.MyScenes;
+using MyEngine.Scripting;
+using MyEngine.Scripting.F_;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Metadata;
-using System.Security.Cryptography.X509Certificates;
-using static FSharp.Compiler.Syntax.SynSimplePat;
+using static FSharp.Compiler.Symbols.FSharpImplementationFileDeclaration;
 
 namespace MyEngine
 {
@@ -161,9 +162,10 @@ namespace MyEngine
 
 public class SceneImplementation : Scene
 {
-    XMLGameManager _gameManager;
-    int _id;
-    ContentManager cont;
+    private XMLGameManager _gameManager;
+    private int _id;
+    private ContentManager cont;
+    private Dictionary<MainEntity,IScript> Scripts { get; set; }
     public SceneImplementation(XMLGameManager gameManager, int id, string nombre, ContentManager content) : base(nombre)
     {
         _gameManager = gameManager;
@@ -176,15 +178,13 @@ public class SceneImplementation : Scene
         base.InternalInitialize(GraphicsDevice, SpriteBatch, cont, Audio);
         ResourceManager resourceManager = new ResourceManager(Content);
         List<EntityInfo> entityInfos = _gameManager.ListEntitiesByScene(_id);
-        
+
         foreach(var entityInfo in entityInfos)
         {
             var entity = World.CreateEntity(entityInfo.Name);
-            for(int i = 0; i < entityInfo.ComponentsCount; i++)
-            {
-                var componentInfo = _gameManager.ListEntityComponents(entityInfo.Id);
+            var componentInfo = _gameManager.ListEntityComponents(entityInfo.Id);
 
-                foreach(var component in componentInfo)
+            foreach(var component in componentInfo)
                 {
                     if (!component.Active) continue;
 
@@ -241,22 +241,90 @@ public class SceneImplementation : Scene
                             component.Attributes.TryGetValue("maxHealth", out string maxHealth);
                             entity.AddComponent<LifeComponent>(resourceManager.CrearVida(int.Parse(maxHealth)));
                             break;
+                        case "RigidbodyComponent":
+                            component.Attributes.TryGetValue("mass", out string mass);
+                            component.Attributes.TryGetValue("acceleration", out string asceleration);
+                            component.Attributes.TryGetValue("velocityX", out string velocityX);
+                            component.Attributes.TryGetValue("velocityY", out string velocityY);
+                            entity.AddComponent<RigidbodyComponent>(resourceManager.CrearRigidbody(float.Parse(mass), float.Parse(asceleration), new Vector2(float.Parse(velocityX), float.Parse(velocityY))));
+                            break;
+                        case "TilemapComponent":
+                            component.Attributes.TryGetValue("path", out string tilemapPath);
+                            entity.AddComponent<TilemapComponent>(resourceManager.CrearMapa(tilemapPath));
+                            break;
+                        case "TilemapCollisionsComponent":
+                            component.Attributes.TryGetValue("path", out string tilemapCollisionPath);
+                            entity.AddComponent<TilemapCollisionsComponent>(resourceManager.CrearColisionesMapa(tilemapCollisionPath));
+                            break;
+                        case "ScriptComponent":
+                        component.Attributes.TryGetValue("path", out string ScriptPath);
+                        component.Attributes.TryGetValue("languaje", out string languaje);
 
+                        if (Enum.TryParse<ScriptLanguaje>(languaje, out ScriptLanguaje scriptLanguajeParseado))
+                        {
+                            entity.AddComponent<ScriptComponent>(resourceManager.CrearScripting(ScriptPath, scriptLanguajeParseado));
+                        }
+                        else
+                        {
+                            World.RemoveEntity(entity);
+                            throw new Exception($"El lenguaje del script no es valido. EntidadId: {entity.Id}, con el nombre de {entityInfo.Name}");
+                        }
+
+                        break;
+                    default:
+                            World.RemoveEntity(entity);
+                            throw new Exception($"El componente que se quiere agregar a la entidad, no existe. EntidadId: {entity.Id}, con el nombre de {entityInfo.Name}");
                     }
+
+                    
                 }
 
+        }
+
+        foreach (MainEntity entidad in World.GetAllEntities())
+        {
+            if (!entidad.HasComponent<ScriptComponent>()) continue;
+            var scriptComp = entidad.GetComponent<ScriptComponent>();
+            switch (scriptComp.Languaje)
+            {
+                case ScriptLanguaje.CSharp:
+                    Scripts[entidad] = ScriptLoader.LoadScriptInstance(scriptComp.FilePath, entidad);
+                    break;
+                case ScriptLanguaje.FSharp:
+                    throw new NotImplementedException("F# Todavia no esta soportado por el motor. Pero si mas adelante.");
+                //Scripts[entidad.Id] = FSharpScriptCompiler.CompileScript(scriptComp.FilePath);
+                case ScriptLanguaje.JavaScript:
+                    throw new NotImplementedException("JavaScript Todavia no esta soportado por el motor. Pero si mas adelante.");
+                case ScriptLanguaje.Python:
+                    throw new NotImplementedException("Python Todavia no esta soportado por el motor. Pero si mas adelante.");
+                case ScriptLanguaje.Lua:
+                    throw new NotImplementedException("Lua Todavia no esta soportado por el motor. Pero si mas adelante.");
+                case ScriptLanguaje.Ruby:
+                    throw new NotImplementedException("Ruby Todavia no esta soportado por el motor. Pero si mas adelante.");
+                default:
+                    throw new Exception($"El lenguaje del script no es valido. EntidadId: {entidad.Id}, lenguaje solicitado fue {scriptComp.Languaje} con path {scriptComp.FilePath}");
             }
         }
     }
 
     public override void LoadContent()
     {
-        throw new NotImplementedException();
+        base.OnActivate();
     }
 
     protected override void OnUpdate(GameTime gameTime)
     {
+        foreach (var script in Scripts)
+        {
+            script.Value.Update(gameTime, script.Key);
+        }
         base.OnUpdate(gameTime);
     }
+
+    public override void Update(GameTime gameTime)
+    {
+        base.Update(gameTime);
+    }
+
 
 }

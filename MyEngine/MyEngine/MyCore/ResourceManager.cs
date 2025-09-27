@@ -80,5 +80,13 @@ namespace MyEngine.MyCore
             return tilemapComp;
         }
 
+        public ScriptComponent CrearScripting(string scriptPath, ScriptLanguaje scriptLanguaje)
+        {
+            ScriptComponent scriptComponent = new ScriptComponent();
+            scriptComponent.FilePath = scriptPath;
+            scriptComponent.Languaje = scriptLanguaje;
+            return scriptComponent;
+        }
+
     }
 }
